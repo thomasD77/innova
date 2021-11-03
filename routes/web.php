@@ -22,7 +22,7 @@ use \Spatie\GoogleCalendar\Event;
 Auth::routes(['verify'=> true]);
 
 // Example Routes
-Route::view('/', 'landing');
+Route::view('/landing', 'landing');
 Route::match(['get', 'post'], '/dashboard', function(){
     return view('admin/dashboard');
 });
@@ -31,6 +31,12 @@ Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/pages/blank', 'pages.blank');
 Route::view('/register/client', 'auth.registerClient');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+//Frontend Routes
+Route::resource('/', App\Http\Controllers\FrontEndController::class);
+
+
 
 
 // Backend Routes
