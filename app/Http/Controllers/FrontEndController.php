@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HomePage;
+use App\Models\Photo;
 use Illuminate\Http\Request;
 
 class FrontEndController extends Controller
@@ -14,7 +16,9 @@ class FrontEndController extends Controller
     public function index()
     {
         //
-        return view('front.front');
+        $data = HomePage::latest()->first();
+        $photos = Photo::where('home_page_id', $data->id)->get();
+        return view('front.front', compact('data', 'photos'));
     }
 
     /**

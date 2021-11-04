@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateHomePagesTable extends Migration
 {
+    public $homeCount = 20;
     /**
      * Run the migrations.
      *
@@ -17,12 +18,12 @@ class CreateHomePagesTable extends Migration
         Schema::create('home_pages', function (Blueprint $table) {
             $table->id();
 
-            for ($i = 1; $i <= 10; $i++ ){
+            for ($i = 1; $i <= $this->homeCount; $i++ ){
                 $table->string('input_' . $i )->nullable();
             }
 
-            for ($i = 1; $i <= 10; $i++ ){
-                $table->string('text_' . $i )->nullable();
+            for ($i = 1; $i <= $this->homeCount; $i++ ){
+                $table->text('text_' . $i )->nullable();
             }
 
             $table->timestamps();

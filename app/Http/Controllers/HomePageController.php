@@ -12,6 +12,8 @@ use Brian2694\Toastr\Facades\Toastr;
 
 class HomePageController extends Controller
 {
+    public $homeCount = 40;
+
     /**
      * Display a listing of the resource.
      *
@@ -80,46 +82,34 @@ class HomePageController extends Controller
         //
         $creditential = HomePage::findOrFail($id);
 
-        $creditential->input_1 = $request->input_1;
-        $creditential->input_2 = $request->input_2;
-        $creditential->input_3 = $request->input_3;
-        $creditential->input_4 = $request->input_4;
-        $creditential->input_5 = $request->input_5;
-        $creditential->input_6 = $request->input_6;
-        $creditential->input_7 = $request->input_7;
-        $creditential->input_8 = $request->input_8;
-        $creditential->input_9 = $request->input_9;
-        $creditential->input_10 = $request->input_10;
-
-        $creditential->text_1 = $request->text_1;
-        $creditential->text_2 = $request->text_2;
-        $creditential->text_3 = $request->text_3;
-        $creditential->text_4 = $request->text_4;
-        $creditential->text_5 = $request->text_5;
-        $creditential->text_6 = $request->text_6;
-        $creditential->text_7 = $request->text_7;
-        $creditential->text_8 = $request->text_8;
-        $creditential->text_9 = $request->text_9;
-        $creditential->text_10 = $request->text_10;
+        for ($i = 1; $i <= $this->homeCount; $i++ ){
+            $input = 'input_' . $i;
+            $creditential->$input = $request->$input;
+            $creditential->update();
+        }
 
 
-        $creditential->update();
+        for ($i = 1; $i <= $this->homeCount; $i++ ){
+            $text = 'text_' . $i;
+            $creditential->$text = $request->$text;
+            $creditential->update();
+        }
 
         $photos = Photo::where('home_page_id', $creditential->id)
             ->get();
 
         if($photos->isEmpty())                                                      //When we don't have any files we make them
         {
-            for ($i = 1; $i <= 10; $i++ )
+            for ($i = 1; $i <= $this->homeCount; $i++ )
             {
                 if ($file = $request->file('photo_' . $i))
                 {
                     $name = time() . $file->getClientOriginalName();
                     $file->move('images/form_credentials', $name);
-                    $path = 'images/form_credentials/' . $name;
-                    $image = Image::make($path);
-                    $image->resize(250, 250);
-                    $image->save('images/form_credentials/' . $name);
+//                    $path = 'images/form_credentials/' . $name;
+//                    $image = Image::make($path);
+//                    $image->resize(250, 250);
+//                    $image->save('images/form_credentials/' . $name);
                     Photo::create(['file' => $name, 'home_page_id' => $creditential->id]);
                 }
                 elseif ($file = $request->file('photo_' . $i) == null)
@@ -130,24 +120,24 @@ class HomePageController extends Controller
         }
         else
         {
-                for ($i = 1; $i <= 10; $i++)
+            for ($i = 1; $i <= $this->homeCount; $i++)
+            {
+                if ($file = $request->file('photo_' . $i))
                 {
-                    if ($file = $request->file('photo_' . $i))
-                    {
-                        $name = time() . $file->getClientOriginalName();
-                        $file->move('images/form_credentials', $name);
-                        $path = 'images/form_credentials/' . $name;
-                        $image = Image::make($path);
-                        $image->resize(250, 250);
-                        $image->save('images/form_credentials/' . $name);
+                    $name = time() . $file->getClientOriginalName();
+                    $file->move('images/form_credentials', $name);
+//                    $path = 'images/form_credentials/' . $name;
+//                    $image = Image::make($path);
+//                    $image->resize(250, 250);
+//                    $image->save('images/form_credentials/' . $name);
 
-                        $photo = Photo::findOrFail($i);
+                    $photo = Photo::findOrFail($i);
 //                        $photo = (['file' => $name, 'home_page_id' => $creditential->id, 'id' => $i]);
-                        $photo->file = $name;
-                        $photo->home_page_id = $creditential->id;
-                        $photo->update();
-                    }
+                    $photo->file = $name;
+                    $photo->home_page_id = $creditential->id;
+                    $photo->update();
                 }
+            }
         }
 
         Session::flash('flash_message', 'Your Home Page Builder is Updated');

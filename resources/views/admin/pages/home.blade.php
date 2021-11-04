@@ -24,243 +24,143 @@
                 {!! Form::open(['method'=>'PATCH', 'action'=>['App\Http\Controllers\HomePageController@update',$credential->id],'files'=>true])!!}
                 <div class="row">
 
+                    <h2>ABOUT</h2>
                     <div class="mb-4">
-                        <label class="form-label" for="input_1">Input 1</label>
-                        <input type="text" class="form-control" name="input_1"
-                               value="{{ $credential->input_1 }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 1</label>
+                        <label class="form-label" for="text_1">Subtitle</label>
                         <textarea class="form-control js-ckeditor5-classic"  name="text_1" >{{ $credential->text_1 }}</textarea>
                     </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_2">Input 2</label>
-                        <input type="text" class="form-control" name="input_2"
-                               value="{{ $credential->input_2 }}">
+                    <div class="col-4">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Design</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_2" >{{ $credential->text_2 }}</textarea>
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 2</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_2" >{{ $credential->text_2 }}</textarea>
+                    <div class="col-4">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Web Development</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_3" >{{ $credential->text_3 }}</textarea>
+                        </div>
                     </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_3">Input 3</label>
-                        <input type="text" class="form-control" name="input_3"
-                               value="{{ $credential->input_3 }}">
+                    <div class="col-4">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Client Support</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_4" >{{ $credential->text_4 }}</textarea>
+                        </div>
                     </div>
+
+
+                    <h2>HOW WE WORK</h2>
                     <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 3</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_3" >{{ $credential->text_3 }}</textarea>
-                    </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_4">Input 4</label>
-                        <input type="text" class="form-control" name="input_4"
-                               value="{{ $credential->input_4 }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 4</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_4" >{{ $credential->text_4 }}</textarea>
-                    </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_5">Input 5</label>
-                        <input type="text" class="form-control" name="input_5"
-                               value="{{ $credential->input_5 }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 5</label>
+                        <label class="form-label" for="text_1">Subtitle</label>
                         <textarea class="form-control js-ckeditor5-classic"  name="text_5" >{{ $credential->text_5 }}</textarea>
                     </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_6">Input 6</label>
-                        <input type="text" class="form-control" name="input_6"
-                               value="{{ $credential->input_6 }}">
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Awesome</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_6" >{{ $credential->text_6 }}</textarea>
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 6</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_6" >{{ $credential->text_6 }}</textarea>
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Innovative</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_7" >{{ $credential->text_7 }}</textarea>
+                        </div>
                     </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_7">Input 7</label>
-                        <input type="text" class="form-control" name="input_7"
-                               value="{{ $credential->input_7 }}">
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Creative</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_8" >{{ $credential->text_8 }}</textarea>
+                        </div>
                     </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 7</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_7" >{{ $credential->text_7 }}</textarea>
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <label class="form-label" for="text_1">Experimental</label>
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_9" >{{ $credential->text_9 }}</textarea>
+                        </div>
                     </div>
-                    <br>
+
+                    <h2>FOUNDER</h2>
                     <div class="mb-4">
-                        <label class="form-label" for="input_8">Input 8</label>
-                        <input type="text" class="form-control" name="input_8"
-                               value="{{ $credential->input_8 }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_9">Text 8</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_8" >{{ $credential->text_8 }}</textarea>
-                    </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_9">Input 9</label>
-                        <input type="text" class="form-control" name="input_9"
-                               value="{{ $credential->input_9 }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 9</label>
-                        <textarea class="form-control js-ckeditor5-classic"  name="text_9" >{{ $credential->text_9 }}</textarea>
-                    </div>
-                    <br>
-                    <div class="mb-4">
-                        <label class="form-label" for="input_10">Input 10</label>
-                        <input type="text" class="form-control" name="input_10"
-                               value="{{ $credential->input_10 }}">
-                    </div>
-                    <div class="mb-4">
-                        <label class="form-label" for="text_1">Text 10</label>
+                        <label class="form-label" for="text_1">Subtitle</label>
                         <textarea class="form-control js-ckeditor5-classic"  name="text_10" >{{ $credential->text_10 }}</textarea>
                     </div>
-
-
                     <div class="mb-4">
                         <label class="form-label">Photo 1</label>
                         @if(isset($photos[0]))
-                        <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[0] ? asset('images/form_credentials') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
-                        </div>
+                            <div class="mb-4">
+                                <img class="rounded" height="150" width="150" src="{{$photos[0] ? asset('images/form_credentials') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
+                            </div>
                         @endif
                         <div class="form-group mb-4">
                             <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_1">
+                            <input type="file" class="form-control w-50" id="frontend-contact-tagline" name="photo_1">
                         </div>
                     </div>
 
+                    <h2>SERVICES</h2>
                     <div class="mb-4">
-                        <label class="form-label">Photo 2</label>
-                        @if(isset($photos[1]))
+                        <label class="form-label" for="text_1">Subtitle</label>
+                        <textarea class="form-control js-ckeditor5-classic"  name="text_11" >{{ $credential->text_11 }}</textarea>
+                    </div>
+                    <div class="col-3">
                         <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[1] ? asset('images/form_credentials') . $photos[1]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
+                            <input type="text" class="form-control" name="input_1" value="{{ $credential->input_1 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_12" >{{ $credential->text_12 }}</textarea>
                         </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_2">
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" name="input_2" value="{{ $credential->input_2 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_13" >{{ $credential->text_13 }}</textarea>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" name="input_3" value="{{ $credential->input_3 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_14" >{{ $credential->text_14 }}</textarea>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="mb-4">
+                            <input type="text" class="form-control" name="input_4" value="{{ $credential->input_4 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_15" >{{ $credential->text_15 }}</textarea>
                         </div>
                     </div>
 
-
+                    <h2>OUR PROCESS</h2>
                     <div class="mb-4">
-                        <label class="form-label">Photo 3</label>
-                        @if(isset($photos[2]))
+                        <label class="form-label" for="text_1">Subtitle</label>
+                        <textarea class="form-control js-ckeditor5-classic"  name="text_16" >{{ $credential->text_16 }}</textarea>
+                    </div>
+                    <div class="col-3">
                         <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[2] ? asset('images/form_credentials') . $photos[2]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_3">
+                            <input type="text" class="form-control" name="input_5" value="{{ $credential->input_5 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_17" >{{ $credential->text_17 }}</textarea>
                         </div>
                     </div>
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 4</label>
-                        @if(isset($photos[3]))
+                    <div class="col-3">
                         <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[3] ? asset('images/form_credentials') . $photos[3]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_4">
+                            <input type="text" class="form-control" name="input_6" value="{{ $credential->input_6 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_18" >{{ $credential->text_18 }}</textarea>
                         </div>
                     </div>
-
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 5</label>
-                        @if(isset($photos[4]))
+                    <div class="col-3">
                         <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[4] ? asset('images/form_credentials') . $photos[4]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_5">
+                            <input type="text" class="form-control" name="input_7" value="{{ $credential->input_7 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_19" >{{ $credential->text_19 }}</textarea>
                         </div>
                     </div>
-
-
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 6</label>
-                        @if(isset($photos[5]))
+                    <div class="col-3">
                         <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[5] ? asset('images/form_credentials') . $photos[5]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_6">
+                            <input type="text" class="form-control" name="input_8" value="{{ $credential->input_8 }}">
+                            <textarea class="form-control js-ckeditor5-classic"  name="text_20" >{{ $credential->text_20 }}</textarea>
                         </div>
                     </div>
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 7</label>
-                        @if(isset($photos[6]))
-                        <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[6] ? asset('images/form_credentials') . $photos[6]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_7">
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 8</label>
-                        @if(isset($photos[7]))
-                        <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[7] ? asset('images/form_credentials') . $photos[7]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_8">
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 9</label>
-                        @if(isset($photos[8]))
-                        <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[8] ? asset('images/form_credentials') . $photos[8]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_9">
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <label class="form-label">Photo 10</label>
-                        @if(isset($photos[9]))
-                        <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[9] ? asset('images/form_credentials') . $photos[9]->file : 'http://placehold.it/62x62'}}" alt="{{$credential->id}}">
-                        </div>
-                        @endif
-                        <div class="form-group mb-4">
-                            <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                            <input type="file" class="form-control" id="frontend-contact-tagline" name="photo_10">
-                        </div>
-                    </div>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_21" >{{ $credential->text_21 }}</textarea>
 
 
-                <div class="mb-4">
+
+                <div class="my-4">
                     <button type="submit" class="btn btn-alt-primary">
                         <i class="fa fa-paper-plane me-1 opacity-50"></i> Save
                     </button>
