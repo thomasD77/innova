@@ -7,6 +7,7 @@ use App\Exports\SubmissionExport;
 use App\Models\Submission;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\Session;
 use Maatwebsite\Excel\Facades\Excel;
 
 class AdminSubmissionController extends Controller
@@ -44,7 +45,28 @@ class AdminSubmissionController extends Controller
     public function store(Request $request)
     {
         //
-        dd($request);
+        if ($_POST['g-recaptcha-response'] != "") {
+            $secret = config('custom.RECAPTCHA_SECRET_KEY');
+
+            $verifyResponse = file_get_contents('https://www.google.com/recaptcha/api/siteverify?secret=' . $secret . '&response=' . $_POST['g-recaptcha-response']);
+            $responseData = json_decode($verifyResponse);
+
+            if ($responseData->success)
+            {
+
+                $data = [
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'description' => $request->description,
+                    'approval' => 1
+                ];
+
+                Submission::create($data);
+            }
+            return redirect('/bedankt');
+        }
+        return redirect()->back();
     }
 
     /**

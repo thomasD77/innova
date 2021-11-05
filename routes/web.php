@@ -30,12 +30,14 @@ Route::view('/pages/slick', 'pages.slick');
 Route::view('/pages/datatables', 'pages.datatables');
 Route::view('/pages/blank', 'pages.blank');
 Route::view('/register/client', 'auth.registerClient');
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('homePage');
 
 
 //Frontend Routes
-Route::resource('/', App\Http\Controllers\FrontEndController::class);
-
+Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
+Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->name('blog');
+Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
+Route::view('/bedankt', 'front.bedankt');
 
 
 

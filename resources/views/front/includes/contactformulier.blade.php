@@ -54,6 +54,10 @@
                                         <div class="alt-placeholder">Message</div>
                                         <textarea name="description" placeholder="Message" data-validation-required-message="Please fill the required field." required></textarea>
                                         <div class="help-block"></div>
+                                        <p>*akkoord op GDPR bij versturen van contactformulier</p>
+                                    </div>
+                                    <div class="col-md-12 control-group d-flex align-items-center">
+                                        <div class="g-recaptcha" id="g-recaptcha" data-sitekey="{{ config('custom.RECAPTCHA_SITE_KEY') }}"></div>
                                     </div>
                                     <div class="col-md-12 form-actions">
                                         <input class="button" type="submit" value="Send">
