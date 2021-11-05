@@ -178,42 +178,21 @@
         <div class="content pane">
             <div class="container-fluid">
                 <div class="row hidden-xs hidden-sm">
-                    <div class="col-md-4 colors-b">
-                        <div class="row">
-                            <div class="col-xs-12 banner-cell">
-                                <h3 class="light-font-weight">Responsive</h3>
-                                <p class="title">Layout</p>
+                    @foreach($contents as $content)
+                        @if($content->parent_id == 'header')
+                            <div class="col-md-4 colors-b">
+                                <div class="row">
+                                    <div class="col-xs-12 banner-cell">
+                                        <h3 class="light-font-weight">{{ $content->title }}</h3>
+                                        <p class="title">{{ $content->subtitle }}</p>
+                                    </div>
+                                    <div class="col-xs-12 success heading-b banner-cell">
+                                        {!! $content->text  !!}
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xs-12 success heading-b banner-cell">
-                                Responsive Styling
-                                <br /> Retina Ready
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 colors-c">
-                        <div class="row">
-                            <div class="col-xs-12 banner-cell">
-                                <h3 class="light-font-weight">Parallax</h3>
-                                <p class="title">Effects</p>
-                            </div>
-                            <div class="col-xs-12 warning heading-c banner-cell">
-                                Highly Optimized
-                                <br /> Smooth Animations
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 colors-d">
-                        <div class="row">
-                            <div class="col-xs-12 banner-cell">
-                                <h3 class="light-font-weight">Bootstrap</h3>
-                                <p class="title">Framework</p>
-                            </div>
-                            <div class="col-xs-12 info heading-d banner-cell">
-                                Adapted for Multicolor Sections
-                                <br /> Highly Customized
-                            </div>
-                        </div>
-                    </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -225,33 +204,19 @@
                 <p class="header-details"><span class="highlight">We Create</span> Awesome Stuff</p>
                 <p class="lead">{{ $data->text_1 }}</p>
                 <div class="row">
-                    <div class="col-md-4">
-                        <div class="col-icon">
-                            <i class="li_t-shirt"></i>
-                        </div>
-                        <div class="col-content">
-                            <h4>Fine <span class="highlight">Design</span></h4>
-                            <p>{{ $data->text_2 }}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-icon">
-                            <i class="li_bulb"></i>
-                        </div>
-                        <div class="col-content">
-                            <h4>Web <span class="highlight">Development</span></h4>
-                            <p>{{ $data->text_3 }}</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="col-icon">
-                            <i class="li_megaphone"></i>
-                        </div>
-                        <div class="col-content">
-                            <h4>Client <span class="highlight">Support</span></h4>
-                            <p>{{ $data->text_4 }}</p>
-                        </div>
-                    </div>
+                    @foreach($contents as $content)
+                        @if($content->parent_id == 'about')
+                            <div class="col-md-4">
+                                <div class="col-icon">
+                                    <i class="{{ $content->subtitle }}"></i>
+                                </div>
+                                <div class="col-content">
+                                    <h4>{{ $content->title }}</h4>
+                                    <p>{{ $content->text }}</p>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -264,38 +229,21 @@
                 <h3><span class="highlight">How</span> We Work</h3>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <p class="text-center">{{ $data->text_5 }}</p>
+                        <p class="text-center">{{ $data->text_2 }}</p>
                     </div>
                 </div>
                 <div class="row icon-set">
-                    <div class="col-md-3 text-center">
-                        <p>
-                            <i class="li_eye circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                        </p>
-                        <p class="title"><span class="underline-text">Awesome</span></p>
-                        <p>{{ $data->text_6 }}</p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p>
-                            <i class="li_like circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                        </p>
-                        <p class="title"><span class="underline-text">Innovative</span></p>
-                        <p>{{ $data->text_7 }}</p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p>
-                            <i class="li_paperplane circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                        </p>
-                        <p class="title"><span class="underline-text">Creative</span></p>
-                        <p>{{ $data->text_8 }}</p>
-                    </div>
-                    <div class="col-md-3 text-center">
-                        <p>
-                            <i class="li_lab circle scroll-in-animation background-20 heading" data-animation="fadeInUp"></i>
-                        </p>
-                        <p class="title"><span class="underline-text">Experimental</span></p>
-                        <p>{{ $data->text_9 }}</p>
-                    </div>
+                    @foreach($contents as $content)
+                        @if($content->parent_id == "howWeWork")
+                            <div class="col-md-3 text-center">
+                                <p>
+                                    <i class="{{ $content->subtitle }}" data-animation="fadeInUp"></i>
+                                </p>
+                                <p class="title">{{ $content->title }}</p>
+                                <p>{{ $content->text }}</p>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -314,7 +262,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
                             @if($photos->isNotEmpty())
-                            <img class="fluid-width" src="{{$photos[0] ? asset('images/form_credentials') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
+                            <img class="fluid-width" src="{{$photos[0] ? asset('images/content') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
 {{--                            <div class="overlay background-90-b">--}}
 {{--                                <div>--}}
 {{--                                    <p class="text-center text-uppercase heading-b">--}}
