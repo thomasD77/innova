@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Content;
+use App\Models\Photo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
+use Image;
 
 class AdminContentController extends Controller
 {
@@ -46,6 +49,29 @@ class AdminContentController extends Controller
         $content->parent_id = $request->parent_id;
         $content->save();
 
+        if($file = $request->file('photo'))
+        {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images/content', $name);
+
+            if ($request->pictWidth && $request->pictHeight != null)
+            {
+                $path = 'images/content/' . $name;
+                $image = Image::make($path);
+                $image->resize($request->pictWidth, $request->pictHeight);
+                $image->save('images/content/' . $name);
+
+                $content->file = $name;
+                $content->WxH = $request->pictWidth . 'x' . $request->pictHeight;
+                $content->update();
+            }
+            else
+            {
+                $content->file = $name;
+                $content->update();
+            }
+        }
+
         return redirect()->back();
     }
 
@@ -82,6 +108,7 @@ class AdminContentController extends Controller
     {
         //
         $content = Content::findOrFail($id);
+
         $content->title = $request->title;
         $content->subtitle = $request->subtitle;
         $content->text = $request->text;
@@ -90,6 +117,31 @@ class AdminContentController extends Controller
         $content->extra = $request->extra;
         $content->parent_id = $request->parent_id;
         $content->update();
+
+
+        if($file = $request->file('photo'))
+        {
+            $name = time() . $file->getClientOriginalName();
+            $file->move('images/content', $name);
+
+            if ($request->pictWidth && $request->pictHeight != null)
+            {
+                $path = 'images/content/' . $name;
+                $image = Image::make($path);
+                $image->resize($request->pictWidth, $request->pictHeight);
+                $image->save('images/content/' . $name);
+
+                $content->file = $name;
+                $content->WxH = $request->pictWidth . 'x' . $request->pictHeight;
+                $content->update();
+            }
+            else
+            {
+                $content->file = $name;
+                $content->WxH = null;
+                $content->update();
+            }
+        }
 
         return redirect()->back();
     }

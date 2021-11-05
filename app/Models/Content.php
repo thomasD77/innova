@@ -17,5 +17,7 @@ class Content extends Model
         'second_text',
         'number',
         'extra',
+        'file',
+        'WxH',
     ];
 }

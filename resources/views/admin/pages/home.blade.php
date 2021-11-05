@@ -176,12 +176,16 @@
     <div class="row">
         <h2 class="text-center">Content Blocks</h2>
         <div class="block block-rounded">
-            <h2 class="mt-4">SERVICES</h2>
+            <h3 class="mt-4">SERVICES</h3>
             @include('admin.includes.content-value2', ['parent_id' => 'services'])
         </div>
         <div class="block block-rounded">
-            <h2 class="mt-4">SKILLS</h2>
+            <h3 class="mt-4">SKILLS</h3>
             @include('admin.includes.content-value3', ['parent_id' => 'skills'])
+        </div>
+        <div class="block block-rounded">
+            <h3 class="mt-4">Test</h3>
+            @include('admin.includes.content-value4', ['parent_id' => 'test'])
         </div>
     </div>
 </div>
