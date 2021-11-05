@@ -42,10 +42,29 @@
                 <h2>FOUNDER</h2>
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
-                    <textarea class="form-control js-ckeditor5-classic"  name="text_10" >{{ $credential->text_10 }}</textarea>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_3" >{{ $credential->text_3 }}</textarea>
                 </div>
 
                 @include('admin.includes.image', ['image_id' => 1])
+
+                <h2>SERVICES</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Subtitle</label>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_4" >{{ $credential->text_4 }}</textarea>
+                </div>
+
+                <h2>OUR PROCESS</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Subtitle</label>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_5" >{{ $credential->text_5 }}</textarea>
+                </div>
+
+                <h2>OUR SKILLS</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Subtitle</label>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_6" >{{ $credential->text_6 }}</textarea>
+                </div>
+
 
             <div class="my-4">
                 <button type="submit" class="btn btn-alt-primary">
@@ -82,6 +101,11 @@
         <div class="block block-rounded">
             <h3 class="mt-4 text-uppercase">OUR PROCESS</h3>
             @include('admin.includes.content-value', ['parent_id' => 'process'])
+        </div>
+
+        <div class="block block-rounded">
+            <h3 class="mt-4 text-uppercase">OUR NUMBERS</h3>
+            @include('admin.includes.content-value3', ['parent_id' => 'numbers'])
         </div>
 
         <div class="block block-rounded">

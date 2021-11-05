@@ -256,7 +256,7 @@
             <div class="container">
                 <h2>FOUNDER</h2>
                 <p class="header-details"><span class="highlight">Who </span>We Are</p>
-                <p class="lead">{{ $data->text_10 }}</p>
+                <p class="lead">{{ $data->text_3 }}</p>
                 <div class="row">
                     <div class="col-md-4 col-sm-3"></div>
                     <div class="col-md-4 col-sm-6">
@@ -329,13 +329,13 @@
             <div class="container">
                 <h2>Services</h2>
                 <p class="header-details"><span class="highlight">We Are Here</span> For You</p>
-                <p class="lead">{{ $data->text_11 }}</p>
+                <p class="lead">{{ $data->text_4 }}</p>
                 <div class="row">
                     @foreach($contents as $content)
                         @if($content->parent_id == 'services')
                             <div class="col-md-3 top-line">
                                 <h4>{{ $content->title }}</h4>
-                                <p>{{ $content->text }}</p>
+                                <p>{!!  $content->text  !!}</p>
                             </div>
                         @endif
                     @endforeach
@@ -542,30 +542,18 @@
             <div class="container">
                 <h2>Our <span class="highlight">Process</span></h2>
                 <p class="header-details"><span class="highlight">We Make</span> Our Customers Happy</p>
-                <p class="lead">{{ $data->text_16 }}</p>
+                <p class="lead">{{ $data->text_5 }}</p>
                 <div class="process">
                     <div class="row process-row">
+                        @foreach($contents as $content)
+                            @if($content->parent_id == 'process')
                         <div class="col-md-3 process-step">
-                            <div class="process-box"><i class="li_search heading"></i></div>
-                            <p class="title">{{ $data->input_5 }}</p>
-                            <p class="text-center">{{ $data->text_17 }}</p>
+                            <div class="process-box"><i class="{{ $content->subtitle }} heading"></i></div>
+                            <p class="title">{{ $content->title }}</p>
+                            <p class="text-center">{{ $content->text }}</p>
                         </div>
-                        <div class="col-md-3 process-step">
-                            <div class="process-box"><i class="li_pen heading"></i></div>
-                            <p class="title">{{ $data->input_6 }}</p>
-                            <p class="text-center">{{ $data->text_18 }}</p>
-                        </div>
-                        <div class="col-md-3 process-step">
-                            <div class="process-box"><i class="li_settings heading"></i></div>
-                            <p class="title">{{ $data->input_7 }}</p>
-                            <p class="text-center">{{ $data->text_19 }}</p>
-                        </div>
-                        <div class="col-md-3 process-step">
-                            <div class="process-box"><i class="li_paperplane heading"></i></div>
-                            <p class="title">{{ $data->input_8 }}</p>
-                            <p class="text-center">{{ $data->text_20 }}</p>
-                        </div>
-                    </div>
+                            @endif
+                        @endforeach
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
@@ -582,22 +570,14 @@
                 <h3>Our <span class="highlight">Numbers</span></h3>
                 <p class="title"><span class="highlight">Some of the</span> cool facts about us</p>
                 <div class="row counters">
-                    <div class="col-md-3 counter background-35-b">
-                        <div class="count player row heading background-10-light">210154,23</div>
-                        <div class="caption">Lines of code</div>
-                    </div>
-                    <div class="col-md-3 counter background-35-h">
-                        <div class="count player row heading background-10-light">120</div>
-                        <div class="caption">Clients</div>
-                    </div>
-                    <div class="col-md-3 counter background-35-b">
-                        <div class="count player row heading background-10-light">3459</div>
-                        <div class="caption">Followers</div>
-                    </div>
-                    <div class="col-md-3 counter background-35-h">
-                        <div class="count player row heading background-10-light">7</div>
-                        <div class="caption">Years</div>
-                    </div>
+                    @foreach($contents as $content)
+                        @if($content->parent_id == "numbers")
+                            <div class="col-md-3 counter {{ $content->text }}">
+                                <div class="count player row heading background-10-light">{{ $content->number }}</div>
+                                <div class="caption">{{ $content->title }}</div>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
             <div class="container">
@@ -613,7 +593,7 @@
             <div class="container">
                 <h2>Our <span class="highlight">Skills</span></h2>
                 <p class="header-details"><span class="highlight">Our Main</span> Skills</p>
-                <p class="lead">{{ $data->text_22 }}</p>
+                <p class="lead">{{ $data->text_6 }}</p>
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="widget-tabs nav nav-tabs background-lite-e">
@@ -677,70 +657,8 @@
         </div>
     </div>
 </section>
-<section id="contact">
-    <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" />
-        <div class="content full-size colors-h">
-            <div class="container">
-                <h2>Contact</h2>
-                <p class="header-details">Keep In Touch</p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="text-right scroll-in-animation" data-animation="fadeInLeft">
-                            <p class="big-font uppercase">
-                                Tel: <strong class="highlight">+7 (781) 503-1810</strong>
-                            </p>
-                            <p class="big-font uppercase">
-                                500 Unicorn Park Dr, 21st Floor
-                                <br/> Woburn, MA 01801, United States
-                            </p>
-                            <p class="big-font">
-                                <b>
-                                    <a href="mailto:info@ouraddress.com">info@ouraddress.com</a><br/>
-                                    <a href="http://www.ouraddress.com">www.ouraddress.com</a>
-                                </b>
-                            </p>
-                            <p class="big-font">
-                                <a target="_blank" href="https://twitter.com/"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x heading"></i><i class="fa fa-twitter fa-stack-1x text-background"></i></span></a>
-                                <a target="_blank" href="https://www.facebook.com/"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x heading"></i><i class="fa fa-facebook fa-stack-1x text-background"></i></span></a>
-                                <a target="_blank" href="http://www.youtube.com/"><span class="fa-stack"><i class="fa fa-circle fa-stack-2x heading"></i><i class="fa fa-youtube fa-stack-1x text-background"></i></span></a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="text-left scroll-in-animation" data-animation="fadeInRight">
-                            <form class="ajax-form" data-message-class="colors-e background-95 border heading" action="contact.php" method="post" novalidate="novalidate">
-                                <div class="row">
-                                    <div class="col-md-6 control-group">
-                                        <div class="alt-placeholder">Name</div>
-                                        <input type="text" name="your-name" value="" size="40" placeholder="Name" data-validation-required-message="Please fill the required field." required>
-                                        <div class="help-block"></div>
-                                    </div>
-                                    <div class="col-md-6 control-group">
-                                        <div class="alt-placeholder">Email</div>
-                                        <input type="email" name="your-email" value="" size="40" placeholder="Email" data-validation-required-message="Please fill the required field." required>
-                                        <div class="help-block"></div>
-                                    </div>
-                                    <div class="col-md-12 control-group">
-                                        <div class="alt-placeholder">Message</div>
-                                        <textarea name="your-message" placeholder="Message" data-validation-required-message="Please fill the required field." required></textarea>
-                                        <div class="help-block"></div>
-                                    </div>
-                                    <div class="col-md-12 form-actions">
-                                        <input class="button" type="submit" value="Send">
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <a class="map-open button background-lite-b border-heading-b heading-b" data-map-overlay=".map-overlay" href="#">Locate Us on Map</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
+@include('front.includes.contactformulier')
 <!-- END: Page content -->
 
 @endsection
