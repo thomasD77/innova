@@ -10,6 +10,7 @@ class Photo extends Model
     use HasFactory;
     protected $fillable = [
         'file',
+        'WxH',
         'post_id',
         'credential_id',
         'home_page_id',

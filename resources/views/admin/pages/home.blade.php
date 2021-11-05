@@ -84,18 +84,10 @@
                     <label class="form-label" for="text_1">Subtitle</label>
                     <textarea class="form-control js-ckeditor5-classic"  name="text_10" >{{ $credential->text_10 }}</textarea>
                 </div>
-                <div class="mb-4">
-                    <label class="form-label">Photo 1</label>
-                    @if(isset($photos[0]))
-                        <div class="mb-4">
-                            <img class="rounded" height="150" width="150" src="{{$photos[0] ? asset('images/form_credentials') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
-                        </div>
-                    @endif
-                    <div class="form-group mb-4">
-                        <label class="form-label" for="frontend-contact-email">New Photo? </label>
-                        <input type="file" class="form-control w-50" id="frontend-contact-tagline" name="photo_1">
-                    </div>
-                </div>
+
+                @include('admin.includes.image', ['image_id' => 1])
+
+
 
                 <h2>SERVICES</h2>
                 <div class="mb-4">

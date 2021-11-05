@@ -107,14 +107,30 @@ class HomePageController extends Controller
                 if ($file = $request->file('photo_' . $i))
                 {
                     $name = time() . $file->getClientOriginalName();
-                    $file->move('images/form_credentials', $name);
-//                    $path = 'images/form_credentials/' . $name;
-//                    $image = Image::make($path);
-//                    $image->resize(250, 250);
-//                    $image->save('images/form_credentials/' . $name);
-                    Photo::create(['file' => $name, 'home_page_id' => $creditential->id]);
+                    $file->move('images/content', $name);
+
+                    $width = 'pictWidth' . $i;
+                    $height = 'pictHeight' . $i;
+
+                    if ($request->$width && $request->$height != null)
+                    {
+                        $path = 'images/content/' . $name;
+                        $image = Image::make($path);
+                        $image->resize($request->$width , $request->$height);
+                        $image->save('images/content/' . $name);
+                        Photo::create([
+                            'file' => $name,
+                            'home_page_id' => $creditential->id,
+                            'WxH' => $request->$width . 'x' . $request->$height,
+                        ]);
+                    }
+                    else
+                    {
+                        Photo::create(['file' => $name, 'home_page_id' => $creditential->id]);
+                    }
+
                 }
-                elseif ($file = $request->file('photo_' . $i) == null)
+                elseif ($request->file('photo_' . $i) == null)
                 {
                     Photo::create(['file' => 'http://placehold.it/62x62', 'home_page_id' => $creditential->id]);
                 }
@@ -127,16 +143,31 @@ class HomePageController extends Controller
                 if ($file = $request->file('photo_' . $i))
                 {
                     $name = time() . $file->getClientOriginalName();
-                    $file->move('images/form_credentials', $name);
-//                    $path = 'images/form_credentials/' . $name;
-//                    $image = Image::make($path);
-//                    $image->resize(250, 250);
-//                    $image->save('images/form_credentials/' . $name);
+                    $file->move('images/content', $name);
+
+                    $width = 'pictWidth' . $i;
+                    $height = 'pictHeight' . $i;
+
+                    if ($request->$width && $request->$height != null)
+                    {
+                        $path = 'images/content/' . $name;
+                        $image = Image::make($path);
+                        $image->resize($request->$width , $request->$height);
+                        $image->save('images/content/' . $name);
+                        Photo::create([
+                            'file' => $name,
+                            'home_page_id' => $creditential->id,
+                        ]);
+                    }
+                    else
+                    {
+                        Photo::create(['file' => $name, 'home_page_id' => $creditential->id]);
+                    }
 
                     $photo = Photo::findOrFail($i);
-//                        $photo = (['file' => $name, 'home_page_id' => $creditential->id, 'id' => $i]);
                     $photo->file = $name;
                     $photo->home_page_id = $creditential->id;
+                    $photo->WxH = $request->$width . 'x' . $request->$height;
                     $photo->update();
                 }
             }
