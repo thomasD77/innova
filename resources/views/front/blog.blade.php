@@ -32,7 +32,7 @@
                                                 @endforeach
                                             </div>
                                         </div>
-                                        <h3><a class="page-transition" href="blog-single-2.html">{{ $post->title }}</a></h3>
+                                        <h3><a class="page-transition" href="{{ route('post', $post->slug) }}">{{ $post->title }}</a></h3>
                                        <p>
                                            {!! Str::limit($post->body, 500) !!}
                                        </p>
@@ -41,7 +41,7 @@
                                         <div class="post-tags styled-list">
                                             <i class="fa fa-tags"></i>
                                             <ul>
-                                                <li><a class="page-transition" href="#">{{ $post->postcategory->name }}</a></li>
+                                                <li><a class="page-transition" href="">{{ $post->postcategory->name }}</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -59,7 +59,7 @@
                         <ul>
                             @if($recentposts)
                                 @foreach($recentposts as $post)
-                                    <li><a href="blog-single-1.html">{{ $post->title }}</a></li>
+                                    <li><a href="">{{ $post->title }}</a></li>
                                 @endforeach
                             @endif
                         </ul>
@@ -67,7 +67,7 @@
                         <ul>
                             @if($postcategories)
                                 @foreach($postcategories as $category)
-                                    <li><a href="blog.html" title="View all posts filed under Art">{{ $category->name }}</a></li>
+                                    <li><a href="" title="View all posts filed under Art">{{ $category->name }}</a></li>
                                 @endforeach
                             @endif
                         </ul>

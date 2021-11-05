@@ -57,12 +57,13 @@
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
                     <textarea class="form-control js-ckeditor5-classic"  name="text_5" >{{ $credential->text_5 }}</textarea>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_6" >{{ $credential->text_6 }}</textarea>
                 </div>
 
                 <h2>OUR SKILLS</h2>
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
-                    <textarea class="form-control js-ckeditor5-classic"  name="text_6" >{{ $credential->text_6 }}</textarea>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_7" >{{ $credential->text_7 }}</textarea>
                 </div>
 
 

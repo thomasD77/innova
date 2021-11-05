@@ -35,7 +35,7 @@
                                        <p>
                                            {!! $post->body !!}
                                        </p>
-                                        
+
                                         <div class="post-tags styled-list">
                                             <i class="fa fa-tags"></i>
                                             <ul>

@@ -406,7 +406,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
-                        <p class="text-center">{{ $data->text_21 }}</p>
+                        <p class="text-center">{{ $data->text_6 }}</p>
                     </div>
                 </div>
             </div>
@@ -442,63 +442,39 @@
             <div class="container">
                 <h2>Our <span class="highlight">Skills</span></h2>
                 <p class="header-details"><span class="highlight">Our Main</span> Skills</p>
-                <p class="lead">{{ $data->text_6 }}</p>
+                <p class="lead">{{ $data->text_7 }}</p>
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="widget-tabs nav nav-tabs background-lite-e">
                             @foreach($contents as $content)
-                                @if($content->parent_id == 'skills')
-                                    <li class="{{ $loop->first ? 'active' : '' }}"><a href="{{ $content->id }}" data-toggle="tab">{{ $content->title }}</a></li>
+                                @if($content->parent_id == "skills")
+                                    <li class="{{ $loop->first ? 'active' : '' }}"><a href="#{{$content->title}}" data-toggle="tab">{{$content->title}}</a></li>
                                 @endif
                             @endforeach
                         </ul>
+
                         <div class="tab-content">
-                            @foreach($contents as $content)
-                                @if($content->parent_id == 'services')
-                            <div class="tab-pane " id="{{ $content->id }}">
-                                <p>{{ $content->text }}</p>
-                            </div>
+                            @foreach($contents as $index => $content)
+                                @if($content->parent_id == "skills")
+                                    <div class="tab-pane {{ $index == 1 ? 'active in' : 'fade' }} " id="{{ $content->title }}">
+                                        <p> {{ $content->text }}</p>
+                                    </div>
                                 @endif
                             @endforeach
                         </div>
                     </div>
+
                     <div class="col-md-6">
                         <div class="skillbars">
-                            <div class="skillbar clearfix background-d" data-percent="40%">
-                                <div class="skillbar-title background-b heading-b"><span>HTML5</span></div>
-                                <div class="skillbar-bar background-b"></div>
-                                <div class="skill-bar-percent heading-d">40%</div>
-                            </div>
-                            <div class="skillbar clearfix background-d" data-percent="45%">
-                                <div class="skillbar-title background-c heading-c"><span>CSS3</span></div>
-                                <div class="skillbar-bar background-c"></div>
-                                <div class="skill-bar-percent heading-d">45%</div>
-                            </div>
-                            <div class="skillbar clearfix background-d" data-percent="50%">
-                                <div class="skillbar-title background-b heading-b"><span>jQuery</span></div>
-                                <div class="skillbar-bar background-b"></div>
-                                <div class="skill-bar-percent heading-d">50%</div>
-                            </div>
-                            <div class="skillbar clearfix background-d" data-percent="40%">
-                                <div class="skillbar-title background-c heading-c"><span>PHP</span></div>
-                                <div class="skillbar-bar background-c"></div>
-                                <div class="skill-bar-percent heading-d">40%</div>
-                            </div>
-                            <div class="skillbar clearfix background-d" data-percent="90%">
-                                <div class="skillbar-title background-b heading-b"><span>Wordpress</span></div>
-                                <div class="skillbar-bar background-b"></div>
-                                <div class="skill-bar-percent heading-d">90%</div>
-                            </div>
-                            <div class="skillbar clearfix background-d" data-percent="75%">
-                                <div class="skillbar-title background-c heading-c"><span>SEO</span></div>
-                                <div class="skillbar-bar background-c"></div>
-                                <div class="skill-bar-percent heading-d">75%</div>
-                            </div>
-                            <div class="skillbar clearfix background-d" data-percent="70%">
-                                <div class="skillbar-title background-b heading-b"><span>Photoshop</span></div>
-                                <div class="skillbar-bar background-b"></div>
-                                <div class="skill-bar-percent heading-d">70%</div>
-                            </div>
+                            @foreach($contents as $index => $content)
+                                @if($content->parent_id == "skills")
+                                    <div class="skillbar clearfix background-d" data-percent="{{ $content->number }}%">
+                                        <div class="skillbar-title background-b heading-b"><span>{{ $content->title }}</span></div>
+                                        <div class="skillbar-bar background-b"></div>
+                                        <div class="skill-bar-percent heading-d">{{ $content->number }}%</div>
+                                    </div>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                 </div>
