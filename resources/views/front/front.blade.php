@@ -313,6 +313,7 @@
                     <div class="col-md-4 col-sm-3"></div>
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
+                            @if($photos->isNotEmpty())
                             <img class="fluid-width" src="{{$photos[0] ? asset('images/form_credentials') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
 {{--                            <div class="overlay background-90-b">--}}
 {{--                                <div>--}}
@@ -327,6 +328,7 @@
 {{--                                    </p>--}}
 {{--                                </div>--}}
 {{--                            </div>--}}
+                                @endif
                         </div>
                         <div class="caption">
                             <p>
@@ -381,22 +383,14 @@
                 <p class="header-details"><span class="highlight">We Are Here</span> For You</p>
                 <p class="lead">{{ $data->text_11 }}</p>
                 <div class="row">
-                    <div class="col-md-3 top-line">
-                        <h4>{{ $data->input_1 }}</h4>
-                        <p>{{ $data->text_12 }}</p>
-                    </div>
-                    <div class="col-md-3 top-line">
-                        <h4>{{ $data->input_2 }}</h4>
-                        <p>{{ $data->text_13 }}</p>
-                    </div>
-                    <div class="col-md-3 top-line">
-                        <h4>{{ $data->input_3 }}</h4>
-                        <p>{{ $data->text_14 }}</p>
-                    </div>
-                    <div class="col-md-3 top-line">
-                        <h4>{{ $data->input_4 }}</h4>
-                        <p>{{ $data->text_15 }}</p>
-                    </div>
+                    @foreach($contents as $content)
+                        @if($content->parent_id == 'services')
+                            <div class="col-md-3 top-line">
+                                <h4>{{ $content->title }}</h4>
+                                <p>{{ $content->text }}</p>
+                            </div>
+                        @endif
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -671,39 +665,24 @@
             <div class="container">
                 <h2>Our <span class="highlight">Skills</span></h2>
                 <p class="header-details"><span class="highlight">Our Main</span> Skills</p>
-                <p class="lead">Aliquam scelerisque vestibulum mi, eu commodo sem vestibulum convallis. Proin sed mi vehicula, porta nisi eu, facilisis nisl. Etiam tristique mi nec fermentum vestibulum. Nullam in nisi ut tellus laoreet ultrices. In ullamcorper dictum interdum vestibulum etiam tristique mi nec fermentum commodo sem vestibulum laoreet ultrices.</p>
+                <p class="lead">{{ $data->text_22 }}</p>
                 <div class="row">
                     <div class="col-md-6">
                         <ul class="widget-tabs nav nav-tabs background-lite-e">
-                            <li class="active"><a href="#html5" data-toggle="tab">HTML5</a></li>
-                            <li class=""><a href="#css3" data-toggle="tab">CSS3</a></li>
-                            <li class=""><a href="#jquery-skill" data-toggle="tab">jQuery</a></li>
-                            <li class=""><a href="#wordpress" data-toggle="tab">Wordpress</a></li>
-                            <li class=""><a href="#seo" data-toggle="tab">SEO</a></li>
-                            <li class=""><a href="#photoshop" data-toggle="tab">Photoshop</a></li>
+                            @foreach($contents as $content)
+                                @if($content->parent_id == 'skills')
+                                    <li class="{{ $loop->first ? 'active' : '' }}"><a href="{{ $content->id }}" data-toggle="tab">{{ $content->title }}</a></li>
+                                @endif
+                            @endforeach
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane fade active in" id="html5">
-                                <p>Fusce hendrerit enim et lacus rutrum, fermentum consectetur mauris hendrerit. Mauris scelerisque, est eget convallis blandit, lorem est scelerisque dolor, non dapibus orci enim ut risus. Praesent rhoncus ex sit amet nunc luctus, nec eleifend erat suscipit. In feugiat dui eget gravida dignissim. Quisque sed dictum felis. Integer viverra iaculis nulla, a euismod est. Nulla nec felis ipsum. Phasellus sed scelerisque nisl, eu condimentum metus. Aenean convallis risus nec eleifend pharetra. Vivamus rhoncus eleifend mi in imperdiet. Nullam a justo quis dolor viverra elementum. Nam eleifend leo quis elementum cursus.</p>
+                            @foreach($contents as $content)
+                                @if($content->parent_id == 'services')
+                            <div class="tab-pane " id="{{ $content->id }}">
+                                <p>{{ $content->text }}</p>
                             </div>
-                            <div class="tab-pane fade" id="css3">
-                                <p>Sed dapibus, leo ut egestas convallis, leo purus condimentum ipsum, sit amet lobortis odio nisi id enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Morbi suscipit, mi in interdum volutpat, quam mi porta nisi, dapibus placerat sapien tortor eleifend arcu. Cras sit amet euismod mi, non imperdiet felis. Praesent eros nibh, ullamcorper ut suscipit sit amet, mattis sollicitudin lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis in enim sit amet nibh placerat consectetur id et enim. Nunc nec dui ac ligula posuere posuere vel id metus. Integer maximus eros nec lobortis tempor.</p>
-                            </div>
-                            <div class="tab-pane fade" id="jquery-skill">
-                                <p>Nam eget ex mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam blandit, enim nec rutrum maximus, odio purus maximus odio, vel mattis nisi ante ut velit. Nam ut turpis vel dolor maximus dictum. Donec blandit turpis ut vulputate facilisis. Nam est nisi, posuere vitae posuere in, viverra non tellus. Pellentesque congue, sapien eget sollicitudin sollicitudin, est leo imperdiet ante, facilisis viverra mi augue in leo. Vestibulum felis urna, pharetra et eros ut, mattis consequat mi. Curabitur id tortor mattis, aliquet eros hendrerit, mattis metus. Ut dignissim vel augue in congue. Nulla a ante ut mi scelerisque suscipit. Aenean condimentum turpis mi, sit amet ullamcorper mi commodo non.</p>
-                            </div>
-                            <div class="tab-pane fade" id="php">
-                                <p>Nulla egestas eu odio ac dictum. Phasellus eu odio lectus. Fusce luctus tempor mauris, vel accumsan leo. Nam libero velit, ultrices vel malesuada nec, euismod nec dolor. Maecenas congue erat sed maximus semper. Aliquam vestibulum magna sit amet pulvinar vestibulum. Cras semper condimentum ante, eget suscipit sapien. Sed ac urna nunc. Aenean viverra sem sit amet dolor pretium fringilla. Nam luctus tempus nibh vitae efficitur. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-                            </div>
-                            <div class="tab-pane fade" id="wordpress">
-                                <p>Fusce non commodo sapien, quis ultrices enim. Proin in placerat urna. Nulla luctus leo nec massa vestibulum consequat quis a quam. Maecenas et leo ut orci fringilla ornare non sit amet lectus. Donec ornare eros tortor, sit amet condimentum lectus placerat ut. Duis lacus neque, lacinia non nunc id, aliquet tincidunt orci. In tellus felis, posuere non est rhoncus, tincidunt elementum sapien. Sed non sagittis ante. Duis ultricies mi dolor, feugiat blandit metus ullamcorper nec. Nullam semper gravida consequat. Suspendisse potenti. Mauris sit amet nisi at enim lacinia dignissim. Aenean suscipit pulvinar ex, eu venenatis magna dapibus sit amet.</p>
-                            </div>
-                            <div class="tab-pane fade" id="seo">
-                                <p>Proin non augue posuere, iaculis tortor in, molestie lorem. Praesent ut gravida sem. Aenean sit amet lorem leo. Curabitur risus ante, pulvinar vel erat viverra, porttitor volutpat turpis. Praesent et sapien interdum, sollicitudin nisi non, bibendum leo. Duis posuere lectus velit, vel volutpat massa blandit non. Donec pellentesque vel magna ut dignissim. Pellentesque luctus fringilla eros, in tempus neque venenatis consectetur. Pellentesque purus mauris, laoreet eget augue in, pellentesque sagittis arcu. Etiam at blandit lectus, sit amet volutpat tellus.</p>
-                            </div>
-                            <div class="tab-pane fade" id="photoshop">
-                                <p>Donec ac consectetur neque, vel eleifend nisi. In et nibh at neque convallis tincidunt. Aliquam sodales odio vel malesuada interdum. Duis auctor malesuada lorem. Nulla sed neque ut dui imperdiet congue ut sit amet enim. Phasellus vel commodo dui. Aliquam eu eleifend diam, vitae dapibus velit. Suspendisse ac est hendrerit, mollis lectus vel, accumsan urna. Quisque sit amet iaculis libero, sed maximus justo. Nunc laoreet non libero eu vehicula. Vestibulum ex lectus, pharetra non elementum et, gravida quis mauris. Donec sodales odio eget accumsan blandit.</p>
-                            </div>
+                                @endif
+                            @endforeach
                         </div>
                     </div>
                     <div class="col-md-6">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\CompanyCredential;
+use App\Models\Content;
 use App\Models\HomePage;
 use App\Models\Photo;
 use Illuminate\Http\Request;
@@ -24,7 +25,8 @@ class HomePageController extends Controller
         //
         $credential = HomePage::latest()->first();
         $photos = Photo::where('home_page_id', $credential->id)->get();
-        return view('admin.pages.home', compact('credential', 'photos'));
+        $contents = Content::all();
+        return view('admin.pages.home', compact('credential', 'photos', 'contents'));
     }
 
     /**
@@ -141,6 +143,7 @@ class HomePageController extends Controller
         }
 
         Session::flash('flash_message', 'Your Home Page Builder is Updated');
+
 
         return redirect('/admin');
     }

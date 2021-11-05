@@ -3,11 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Content;
-use App\Models\HomePage;
-use App\Models\Photo;
 use Illuminate\Http\Request;
 
-class FrontEndController extends Controller
+class AdminContentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,10 +15,6 @@ class FrontEndController extends Controller
     public function index()
     {
         //
-        $data = HomePage::latest()->first();
-        $photos = Photo::where('home_page_id', $data->id)->get();
-        $contents = Content::all();
-        return view('front.front', compact('data', 'photos', 'contents'));
     }
 
     /**
@@ -42,6 +36,17 @@ class FrontEndController extends Controller
     public function store(Request $request)
     {
         //
+        $content = new Content();
+        $content->title = $request->title;
+        $content->subtitle = $request->subtitle;
+        $content->text = $request->text;
+        $content->second_text = $request->second_text;
+        $content->number = $request->number;
+        $content->extra = $request->extra;
+        $content->parent_id = $request->parent_id;
+        $content->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -76,6 +81,17 @@ class FrontEndController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $content = Content::findOrFail($id);
+        $content->title = $request->title;
+        $content->subtitle = $request->subtitle;
+        $content->text = $request->text;
+        $content->second_text = $request->second_text;
+        $content->number = $request->number;
+        $content->extra = $request->extra;
+        $content->parent_id = $request->parent_id;
+        $content->update();
+
+        return redirect()->back();
     }
 
     /**
@@ -87,5 +103,9 @@ class FrontEndController extends Controller
     public function destroy($id)
     {
         //
+        $content = Content::findOrFail($id);
+        $content->delete();
+
+        return redirect()->back();
     }
 }
