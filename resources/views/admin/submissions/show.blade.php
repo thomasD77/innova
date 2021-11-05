@@ -95,10 +95,6 @@
                             </div>
                         </div>
                         <div class="form-group my-5">
-                            <label class="form-label mb-2">Date Appointment</label>
-                            <p class="border border-1 border border-light rounded w-100 p-2 mb-0">{{$submission->date}}</p>
-                        </div>
-                        <div class="form-group my-5">
                             <label class="form-label mb-2">Customer situation description</label>
                             <p class="border border-1 border border-light rounded w-100 p-2 mb-0">{{$submission->description}}</p>
                         </div>

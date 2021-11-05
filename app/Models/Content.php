@@ -9,6 +9,7 @@ class Content extends Model
 {
     use HasFactory;
 
+
     protected $fillable = [
         'parent_id',
         'title',

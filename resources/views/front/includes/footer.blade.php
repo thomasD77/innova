@@ -31,7 +31,7 @@
                 <ul class="simple">
                     @if($posts)
                         @foreach($posts as $post)
-                            <li><a href="">{{ $post->title }}</a></li>
+                            <li><a href="{{ route('post', $post->slug) }}">{{ $post->title }}</a></li>
                         @endforeach
                     @endif
                 </ul>

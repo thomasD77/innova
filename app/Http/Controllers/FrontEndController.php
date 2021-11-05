@@ -69,6 +69,13 @@ class FrontEndController extends Controller
         return view('front.post', compact('post', 'postcategories', 'recentposts', 'company', 'posts'));
     }
 
+    public function bedankt()
+    {
+        $company = CompanyCredential::first();
+        $posts = Post::latest()->take(4)->get();
+        return view('front.bedankt', compact('company', 'posts'));
+    }
+
 
     /**
      * Store a newly created resource in storage.

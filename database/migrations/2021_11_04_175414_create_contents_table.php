@@ -26,6 +26,7 @@ class CreateContentsTable extends Migration
             $table->integer('number')->nullable();
             $table->text('extra')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         DB::table('contents')->insert([

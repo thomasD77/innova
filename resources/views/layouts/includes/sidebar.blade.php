@@ -163,75 +163,75 @@
                 @endcan
 
 
-                <li class="nav-main-heading text-uppercase">AGENDA</li>
-                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon  far fa-calendar-alt"></i>
-                        <span class="nav-main-link-name ">Bookings</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('bookings.index')}}">
-                                <span class="nav-main-link-name">List</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('bookings.agenda')}}">
-                                <span class="nav-main-link-name">Agenda</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+{{--                <li class="nav-main-heading text-uppercase">AGENDA</li>--}}
+{{--                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">--}}
+{{--                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">--}}
+{{--                        <i class="nav-main-link-icon  far fa-calendar-alt"></i>--}}
+{{--                        <span class="nav-main-link-name ">Bookings</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav-main-submenu">--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('bookings.index')}}">--}}
+{{--                                <span class="nav-main-link-name">List</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('bookings.agenda')}}">--}}
+{{--                                <span class="nav-main-link-name">Agenda</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
-                <li class="nav-main-heading">e-Commerce</li>
-                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon fab fa-shopify"></i>
-                        <span class="nav-main-link-name">Shop</span>
-                    </a>
-                    <ul class="nav-main-submenu">
+{{--                <li class="nav-main-heading">e-Commerce</li>--}}
+{{--                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">--}}
+{{--                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">--}}
+{{--                        <i class="nav-main-link-icon fab fa-shopify"></i>--}}
+{{--                        <span class="nav-main-link-name">Shop</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav-main-submenu">--}}
 {{--                        <li class="nav-main-item">--}}
 {{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('products.index')}}">--}}
 {{--                                <span class="nav-main-link-name">Products</span>--}}
 {{--                            </a>--}}
 {{--                        </li>--}}
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('location.index')}}">
-                                <span class="nav-main-link-name">Locations</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/slick') ? ' active' : '' }}" href="{{ route('services.index') }}">
-                                <span class="nav-main-link-name">Services</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/blank') ? ' active' : '' }}" href="{{ route('service-categories.index') }}">
-                                <span class="nav-main-link-name ms-3">Categories</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/blank') ? ' active' : '' }}" href="{{ route('promos.index') }}">
-                                <span class="nav-main-link-name">Promos</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('location.index')}}">--}}
+{{--                                <span class="nav-main-link-name">Locations</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/slick') ? ' active' : '' }}" href="{{ route('services.index') }}">--}}
+{{--                                <span class="nav-main-link-name">Services</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/blank') ? ' active' : '' }}" href="{{ route('service-categories.index') }}">--}}
+{{--                                <span class="nav-main-link-name ms-3">Categories</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/blank') ? ' active' : '' }}" href="{{ route('promos.index') }}">--}}
+{{--                                <span class="nav-main-link-name">Promos</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
-                <li class="nav-main-heading">People</li>
-                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon far fa-gem"></i>
-                        <span class="nav-main-link-name">Clients</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('clients.index')}}">
-                                <span class="nav-main-link-name">list</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+{{--                <li class="nav-main-heading">People</li>--}}
+{{--                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">--}}
+{{--                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">--}}
+{{--                        <i class="nav-main-link-icon far fa-gem"></i>--}}
+{{--                        <span class="nav-main-link-name">Clients</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav-main-submenu">--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('clients.index')}}">--}}
+{{--                                <span class="nav-main-link-name">list</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
 
                 <li class="nav-main-heading">Publish</li>
                 <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
@@ -270,24 +270,24 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon fa fa-comment-dots"></i>
-                        <span class="nav-main-link-name">Testimonials</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('testimonials.index')}}">
-                                <span class="nav-main-link-name">list</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('testimonials.form')}}">
-                                <span class="nav-main-link-name">Form</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
+{{--                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">--}}
+{{--                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">--}}
+{{--                        <i class="nav-main-link-icon fa fa-comment-dots"></i>--}}
+{{--                        <span class="nav-main-link-name">Testimonials</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav-main-submenu">--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('testimonials.index')}}">--}}
+{{--                                <span class="nav-main-link-name">list</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('testimonials.form')}}">--}}
+{{--                                <span class="nav-main-link-name">Form</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                    </ul>--}}
+{{--                </li>--}}
                 <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
                     <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
                         <i class="nav-main-link-icon far fa-list-alt"></i>
@@ -301,25 +301,25 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
-                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                        <i class="nav-main-link-icon fab fa-mailchimp"></i>
-                        <span class="nav-main-link-name">MailChimp</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('mailchimp.form')}}">
-                                <span class="nav-main-link-name">Signup Form</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('mailchimp.contact')}}">
-                                <span class="nav-main-link-name">Contact</span>
-                            </a>
-                        </li>
+{{--                <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">--}}
+{{--                    <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">--}}
+{{--                        <i class="nav-main-link-icon fab fa-mailchimp"></i>--}}
+{{--                        <span class="nav-main-link-name">MailChimp</span>--}}
+{{--                    </a>--}}
+{{--                    <ul class="nav-main-submenu">--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('mailchimp.form')}}">--}}
+{{--                                <span class="nav-main-link-name">Signup Form</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        <li class="nav-main-item">--}}
+{{--                            <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('mailchimp.contact')}}">--}}
+{{--                                <span class="nav-main-link-name">Contact</span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
 
-                    </ul>
-                </li>
+{{--                    </ul>--}}
+{{--                </li>--}}
 
 
                 @canany(['is_superAdmin', 'is_admin'])
@@ -339,22 +339,22 @@
                     </li>
                 @endcan
 
-                @can('is_superAdmin')
-                    <li class="nav-main-heading">Components</li>
-                    <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">
-                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                            <i class="nav-main-link-icon far fa-address-card"></i>
-                            <span class="nav-main-link-name">Forms/Components</span>
-                        </a>
-                        <ul class="nav-main-submenu">
-                            <li class="nav-main-item">
-                                <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('components.index')}}">
-                                    <span class="nav-main-link-name">Components</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                @endcan
+{{--                @can('is_superAdmin')--}}
+{{--                    <li class="nav-main-heading">Components</li>--}}
+{{--                    <li class="nav-main-item{{ request()->is('pages/*') ? ' open' : '' }}">--}}
+{{--                        <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">--}}
+{{--                            <i class="nav-main-link-icon far fa-address-card"></i>--}}
+{{--                            <span class="nav-main-link-name">Forms/Components</span>--}}
+{{--                        </a>--}}
+{{--                        <ul class="nav-main-submenu">--}}
+{{--                            <li class="nav-main-item">--}}
+{{--                                <a class="nav-main-link{{ request()->is('pages/datatables') ? ' active' : '' }}" href="{{route('components.index')}}">--}}
+{{--                                    <span class="nav-main-link-name">Components</span>--}}
+{{--                                </a>--}}
+{{--                            </li>--}}
+{{--                        </ul>--}}
+{{--                    </li>--}}
+{{--                @endcan--}}
 
 
             </ul>

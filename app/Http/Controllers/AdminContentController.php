@@ -73,6 +73,8 @@ class AdminContentController extends Controller
             }
         }
 
+        Session::flash('flash_message', 'Record Successfully Created');
+
         return redirect()->back();
     }
 
@@ -144,6 +146,8 @@ class AdminContentController extends Controller
             }
         }
 
+        Session::flash('flash_message', 'Record Successfully Updated');
+
         return redirect()->back();
     }
 
@@ -158,6 +162,8 @@ class AdminContentController extends Controller
         //
         $content = Content::findOrFail($id);
         $content->delete();
+
+        Session::flash('flash_message', 'Record Successfully Deleted');
 
         return redirect()->back();
     }

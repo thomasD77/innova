@@ -3,12 +3,12 @@
 <?php require '../resources/inc/_global/views/head_start.php'; ?>
 <?php require '../resources/inc/_global/views/head_end.php'; ?>
 <?php require '../resources/inc/_global/views/page_start.php'; ?>
-
 <!-- Page JS Plugins CSS -->
 <?php $one->get_css('js/plugins/cropperjs/cropper.min.css'); ?>
 
 <!-- Hero Content -->
-<div class="bg-primary-dark" style="background-image: url({{asset('images/general/banner6.png')}}); background-size: cover  ; background-repeat: no-repeat ">
+<div class="bg-primary-dark parent" style="background-image: url({{asset('images/general/banner6.png')}}); background-size: cover  ; background-repeat: no-repeat ">
+    @include('admin.includes.flash')
     <div class="content content-full text-center pt-7 pb-5">
         <h1 class="h2 text-white mb-2">
             Home Page Builder
@@ -26,6 +26,12 @@
         <div class="row items-push justify-content-center">
             {!! Form::open(['method'=>'PATCH', 'action'=>['App\Http\Controllers\HomePageController@update',$credential->id],'files'=>true])!!}
             <div class="row">
+
+                <h2>HEADER title</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Intro</label>
+                    <input type="text" class="form-control"  name="input_2" value="{{ $credential->input_2 }}" >
+                </div>
 
                 <h2>ABOUT</h2>
                 <div class="mb-4">
@@ -53,11 +59,17 @@
                     <textarea class="form-control js-ckeditor5-classic"  name="text_4" >{{ $credential->text_4 }}</textarea>
                 </div>
 
+                <h2>QUOTE</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Slogan</label>
+                    <input type="text" class="form-control"  name="input_1" value="{{ $credential->input_1 }}" >
+                </div>
+
                 <h2>OUR PROCESS</h2>
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
                     <textarea class="form-control js-ckeditor5-classic"  name="text_5" >{{ $credential->text_5 }}</textarea>
-                    <textarea class="form-control js-ckeditor5-classic"  name="text_6" >{{ $credential->text_6 }}</textarea>
+                    <textarea class="form-control js-ckeditor5-classic mt-2"  name="text_6" >{{ $credential->text_6 }}</textarea>
                 </div>
 
                 <h2>OUR SKILLS</h2>
@@ -97,6 +109,11 @@
         <div class="block block-rounded">
             <h3 class="mt-4 text-uppercase">SERVICES</h3>
             @include('admin.includes.content-value2', ['parent_id' => 'services'])
+        </div>
+
+        <div class="block block-rounded">
+            <h3 class="mt-4 text-uppercase">Quote</h3>
+            @include('admin.includes.content-value2', ['parent_id' => 'quotes'])
         </div>
 
         <div class="block block-rounded">

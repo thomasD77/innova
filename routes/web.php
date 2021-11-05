@@ -37,7 +37,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
 Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->name('blog');
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
-Route::view('/bedankt', 'front.bedankt');
+Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
 
 
 

@@ -8,11 +8,11 @@
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
                 <h2><span class="thin-font-weight">We <span class="highlight">Are</span></span></h2>
-                <h1 class="text-center">SKROLL<span class="highlight thin-font-weight">EX</span></h1>
+                <h1 class="text-center">{{ substr_replace($company->companyName, "", -2) }}<span class="highlight thin-font-weight">{{ substr($company->companyName, -2) }}</span></h1>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <p class="title text-center">
-                            Integer ligula ante, posuere et ante quis, eleifend eleifend ipsum. In sed odio mi vivamus dapibus gravida.
+                            {{ $data->input_2 }}
                         </p>
                     </div>
                 </div>
@@ -197,15 +197,15 @@
         <div class="content half-size colors-h">
             <div class="container">
                 <div class="show-list slogan">
-                    <div class="show-item">We Are Designers</div>
-                    <div class="show-item">We Are Programmers</div>
-                    <div class="show-item">We Are Coders</div>
-                    <div class="show-item">We Are Developers</div>
-                    <div class="show-item">We Are Creative</div>
+                    @foreach($contents as $content)
+                        @if($content->parent_id == "quotes")
+                            <div class="show-item">{{ $content->title }}</div>
+                        @endif
+                    @endforeach
                 </div>
                 <div class="separator"></div>
                 <p class="text-center big-font">
-                    <em>— Beyond Webcreation —</em>
+                    <em>— {{ $data->input_1 }} —</em>
                 </p>
             </div>
         </div>
