@@ -7,7 +7,7 @@
         <div class="content colors-e background-solid">
             <div class="container">
                 <h2>{{ $data->input_1 }}</h2>
-                <p class="lead">{{ $data->text_1 }}</p>
+                <p class="lead">{!! $data->text_1 !!}</p>
             </div>
         </div>
     </div>

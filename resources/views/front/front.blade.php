@@ -244,7 +244,7 @@
                         <div class="tab-content">
                             @foreach($contents as $index => $content)
                                 @if($content->parent_id == "skills")
-                                    <div class="tab-pane {{ $index == 1 ? 'active in' : 'fade' }} " id="{{ $content->title }}">
+                                    <div class="tab-pane {{ $index == 25 ? 'active in' : 'fade' }} " id="{{ $content->title }}">
                                         <p> {{ $content->text }}</p>
                                     </div>
                                 @endif
