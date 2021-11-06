@@ -4,7 +4,8 @@
 <!-- BEGIN: Page content -->
 <section id="home">
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_5-min.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_4-min.jpg')}}" />
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
                 <h2><span class="thin-font-weight">We <span class="highlight">Are</span></span></h2>
@@ -24,7 +25,7 @@
 
 <section id="about">
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_pic2-min.jpg')}}" />
         <div class="content pane">
             <div class="container-fluid">
                 <div class="row hidden-xs hidden-sm">
@@ -73,7 +74,7 @@
     </div>
 
     <div class="view" id="how-we-work">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/how_we_work-min.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/bg/how_we_work_2-min.jpg')}}" />
         <div class="content colors-h">
             <div class="container">
                 <h3><span class="highlight">How</span> We Work</h3>
@@ -152,7 +153,7 @@
         </div>
     </div>
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote-min.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_2-min.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_3-min.jpg')}}" />
         <div class="content half-size colors-h">
             <div class="container">
                 <div class="show-list slogan">
@@ -199,7 +200,8 @@
         </div>
     </div>
     <div class="view" id="numbers">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/numbers-min.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/numbers_2-min.jpg')}}" />
         <div class="content half-size colors-h">
             <div class="container-fluid">
                 <h3>Our <span class="highlight">Numbers</span></h3>

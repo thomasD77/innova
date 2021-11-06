@@ -1,6 +1,8 @@
 <section id="contact">
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/contact-min.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/contact_4-min.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/contact_3-min.jpg')}}" />
         <div class="content full-size colors-h">
             <div class="container">
                 <h2>Contact</h2>

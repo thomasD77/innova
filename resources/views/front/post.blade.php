@@ -3,7 +3,8 @@
 <!-- BEGIN: Page content -->
 <section>
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-1.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/blog-min.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/blog_2-min.jpg')}}" />
         <div class="content half-size colors-a">
             <div class="container">
                 <h2>Our <span class="highlight">Blog</span></h2>
