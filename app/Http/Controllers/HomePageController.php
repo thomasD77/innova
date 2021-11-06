@@ -23,9 +23,16 @@ class HomePageController extends Controller
     public function index()
     {
         //
-        $credential = HomePage::latest()->first();
-        $photos = Photo::where('home_page_id', $credential->id)->get();
+        $credential = HomePage::query()
+            ->latest()
+            ->first();
+
+        $photos = Photo::query()
+            ->where('home_page_id', $credential->id)
+            ->get();
+
         $contents = Content::all();
+
         return view('admin.pages.home', compact('credential', 'photos', 'contents'));
     }
 
@@ -84,23 +91,26 @@ class HomePageController extends Controller
         //
         $creditential = HomePage::findOrFail($id);
 
-        for ($i = 1; $i <= $this->homeCount; $i++ ){
-            $input = 'input_' . $i;
+        for ($i = 1; $i <= $this->homeCount; $i++ )
+        {
+            $input = 'input_' . $i;                                                                                     //Update all input records
             $creditential->$input = $request->$input;
             $creditential->update();
         }
 
 
-        for ($i = 1; $i <= $this->homeCount; $i++ ){
-            $text = 'text_' . $i;
+        for ($i = 1; $i <= $this->homeCount; $i++ )
+        {
+            $text = 'text_' . $i;                                                                                       //Update all text records
             $creditential->$text = $request->$text;
             $creditential->update();
         }
 
-        $photos = Photo::where('home_page_id', $creditential->id)
+        $photos = Photo::query()                                                                                        //Get all photos from Home Page
+            ->where('home_page_id', $creditential->id)
             ->get();
 
-        if($photos->isEmpty())                                                      //When we don't have any files we make them
+        if($photos->isEmpty())                                                                                          //Script pictures for First time running
         {
             for ($i = 1; $i <= $this->homeCount; $i++ )
             {
@@ -112,7 +122,7 @@ class HomePageController extends Controller
                     $width = 'pictWidth' . $i;
                     $height = 'pictHeight' . $i;
 
-                    if ($request->$width && $request->$height != null)
+                    if ($request->$width && $request->$height != null)                                                  //Script for customize size
                     {
                         $path = 'images/content/' . $name;
                         $image = Image::make($path);
@@ -126,20 +136,24 @@ class HomePageController extends Controller
                     }
                     else
                     {
-                        Photo::create(['file' => $name, 'home_page_id' => $creditential->id]);
+                        Photo::create([
+                            'file' => $name,                                                                             //Script for original size
+                            'home_page_id' => $creditential->id,
+                        ]);
                     }
 
                 }
                 elseif ($request->file('photo_' . $i) == null)
                 {
-                    Photo::create(['file' => 'http://placehold.it/62x62', 'home_page_id' => $creditential->id]);
-                }
+                    Photo::create(['file' => 'http://placehold.it/62x62', 'home_page_id' => $creditential->id]);         //We make default records to set the position
+                }                                                                                                       //of the pictures
             }
         }
         else
         {
-            for ($i = 1; $i <= $this->homeCount; $i++)
+            for ($i = 1; $i <= $this->homeCount; $i++)                                                                  //Script pictures after first time running
             {
+                $photo = Photo::findOrFail($i);
                 if ($file = $request->file('photo_' . $i))
                 {
                     $name = time() . $file->getClientOriginalName();
@@ -148,28 +162,29 @@ class HomePageController extends Controller
                     $width = 'pictWidth' . $i;
                     $height = 'pictHeight' . $i;
 
-                    if ($request->$width && $request->$height != null)
+                    if ($request->$width && $request->$height != null)                                                  //Script for customize size
                     {
                         $path = 'images/content/' . $name;
                         $image = Image::make($path);
                         $image->resize($request->$width , $request->$height);
                         $image->save('images/content/' . $name);
-                        Photo::create([
-                            'file' => $name,
-                            'home_page_id' => $creditential->id,
-                        ]);
                     }
-                    else
-                    {
-                        Photo::create(['file' => $name, 'home_page_id' => $creditential->id]);
-                    }
-
-                    $photo = Photo::findOrFail($i);
+                    //Update the Picture
                     $photo->file = $name;
                     $photo->home_page_id = $creditential->id;
                     $photo->WxH = $request->$width . 'x' . $request->$height;
-                    $photo->update();
                 }
+
+                $is_active = 'is_active' . $i;                                                                          //Set status for picture
+                if($request->$is_active != null)
+                {
+                    $photo->is_active = 1;
+                }
+                else
+                {
+                    $photo->is_active = 'null';
+                }
+                $photo->update();
             }
         }
 

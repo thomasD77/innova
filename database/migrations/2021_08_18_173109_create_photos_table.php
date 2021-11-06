@@ -17,6 +17,7 @@ class CreatePhotosTable extends Migration
             $table->id();
             $table->string('file');
             $table->string('WxH')->nullable();
+            $table->string('is_active')->default(1);
             $table->integer('post_id')->unsigned()->index()->nullable();
             $table->integer('credential_id')->unsigned()->index()->nullable();
             $table->integer('home_page_id')->unsigned()->index()->nullable();

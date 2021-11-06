@@ -20,11 +20,24 @@ class FrontEndController extends Controller
     public function index()
     {
         //
-        $data = HomePage::latest()->first();
-        $photos = Photo::where('home_page_id', $data->id)->get();
+        $data = HomePage::query()
+            ->latest()
+            ->first();
+
+        $photos = Photo::query()
+            ->where('home_page_id', $data->id)
+            ->get();
+
+
         $contents = Content::all();
+
         $company = CompanyCredential::first();
-        $posts = Post::latest()->take(4)->get();
+
+        $posts = Post::query()
+            ->latest()
+            ->take(4)
+            ->get();
+
         return view('front.front', compact('data', 'photos', 'contents', 'company', 'posts'));
     }
 

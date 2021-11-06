@@ -21,6 +21,7 @@
         </div>
     </div>
 </section>
+
 <section id="about">
     <div class="view">
         <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" />
@@ -111,21 +112,10 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
                             @if($photos->isNotEmpty())
-                            <img class="fluid-width" src="{{$photos[0] ? asset('images/content') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
-{{--                            <div class="overlay background-90-b">--}}
-{{--                                <div>--}}
-{{--                                    <p class="text-center text-uppercase heading-b">--}}
-{{--                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.--}}
-{{--                                    </p>--}}
-{{--                                    <div class="separator-small"></div>--}}
-{{--                                    <p class="text-center">--}}
-{{--                                        <a target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook heading-b"></i></a>--}}
-{{--                                        <a target="_blank" href="http://www.youtube.com/"><i class="fa fa-youtube heading-b"></i></a>--}}
-{{--                                        <a target="_blank" href="https://github.com/"><i class="fa fa-github heading-b"></i></a>--}}
-{{--                                    </p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                                @if($photos[0]->is_active == 1)
+                                    <img class="fluid-width" src="{{$photos[0] ? asset('images/content') . $photos[0]->file   : 'http://placehold.it/62x62'}}" alt="photo">
                                 @endif
+                            @endif
                         </div>
                         <div class="caption">
                             <p>
@@ -139,37 +129,6 @@
             </div>
         </div>
     </div>
-
-{{--    <div class="view" id="who-we-are">--}}
-{{--        <div class="content pane">--}}
-{{--            <div class="container-fluid">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-md-6 stretch-height pane">--}}
-{{--                        <div class="view fluid-height">--}}
-{{--                            <img alt class="bg" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" />--}}
-{{--                            <div class="content incut colors-d background-transparent">--}}
-{{--                                <div class="position-middle-center text-center">--}}
-{{--                                    <a class="button background-lite-c heading-c" href="#work">View Our Work</a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="col-md-6  stretch-height pane">--}}
-{{--                        <div class="view fluid-height">--}}
-{{--                            <div class="content incut colors-h background-solid">--}}
-{{--                                <div class="position-middle-center">--}}
-{{--                                    <h3 class="text-left"><span class="highlight">Who</span> We Are</h3>--}}
-{{--                                    <p class="subtitle highlight"><strong>Quisque dolor lacus, commodo id hendrerit viverra, euismod in odio.</strong></p>--}}
-{{--                                    <p>Aliquam fermentum massa ac est sollicitudin, at ultricies ligula tristique. Cras finibus, nulla ac convallis feugiat, nisl nisl lobortis est, eget auctor velit magna vel nunc. Donec nec eros rhoncus.</p>--}}
-{{--                                    <p>Aenean nisi neque, aliquam ut nibh sit amet, finibus sagittis tortor aenean consectetur.</p>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
 </section>
 
 <section id="services">
@@ -211,179 +170,6 @@
         </div>
     </div>
 </section>
-
-{{--<section id="work">--}}
-{{--    <div class="view">--}}
-{{--        <div class="content no-bottom-padding colors-e background-solid">--}}
-{{--            <div class="container">--}}
-{{--                <h2>Our <span class="highlight">Work</span></h2>--}}
-{{--                <p class="header-details"><span class="highlight">Some Recent</span> Projects</p>--}}
-{{--                <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>--}}
-{{--            </div>--}}
-{{--            <div class="gallery colors-h background-solid" data-default-group="all" data-overlay=".gallery-overlay">--}}
-{{--                <div class="container-fluid">--}}
-{{--                    <div class="filter">--}}
-{{--                        <ul class="nav nav-pills text-center">--}}
-{{--                            <li><a class="hover-effect" data-group="all" href="#">All</a></li>--}}
-{{--                            <li><a class="hover-effect" data-group="web" href="#">Web</a></li>--}}
-{{--                            <li><a class="hover-effect" data-group="video" href="#">Video</a></li>--}}
-{{--                            <li><a class="hover-effect" data-group="photography" href="#">Photography</a></li>--}}
-{{--                            <li><a class="hover-effect" data-group="design" href="#">Design</a> </li>--}}
-{{--                        </ul>--}}
-{{--                    </div>--}}
-{{--                    <div class="row">--}}
-{{--                        <div class="grid">--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["design"]'>--}}
-{{--                                <a href="#!portfolio-item-1.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 1" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-0jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Image</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-picture-o heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web", "video"]'>--}}
-{{--                                <a href="#!portfolio-item-2.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 2" src="{{asset('front/theme-luiza/images/placeholders/500x400-1.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">YouTube Video</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-youtube-square heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design"]'>--}}
-{{--                                <a href="#!portfolio-item-3.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 3" src="{{asset('front/theme-luiza/images/placeholders/500x400-2.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Slider</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-th heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web", "video"]'>--}}
-{{--                                <a href="#!portfolio-item-4.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 4" src="{{asset('front/theme-luiza/images/placeholders/500x400-0.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Vimeo Video</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-vimeo-square heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design"]'>--}}
-{{--                                <a href="#!portfolio-item-5.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 5" src="{{asset('front/theme-luiza/images/placeholders/500x400-1.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Slider</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-th heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web", "design"]'>--}}
-{{--                                <a href="#!portfolio-item-6.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 6" src="{{asset('front/theme-luiza/images/placeholders/500x400-2.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Image</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-picture-o heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["design", "video", "web"]'>--}}
-{{--                                <a href="#!portfolio-item-7.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 7" src="{{asset('front/theme-luiza/images/placeholders/500x400-0.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Vimeo Video</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-vimeo-square heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["web"]'>--}}
-{{--                                <a href="#!portfolio-item-8.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 8" src="{{asset('front/theme-luiza/images/placeholders/500x400-1.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Image</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-picture-o heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design", "video", "web"]'>--}}
-{{--                                <a href="#!portfolio-item-9.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 9" src="{{asset('front/theme-luiza/images/placeholders/500x400-2.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">YouTube Video</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-youtube-square heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "design"]'>--}}
-{{--                                <a href="#!portfolio-item-10.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 10" src="{{asset('front/theme-luiza/images/placeholders/500x400-0.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Vimeo Video</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-vimeo-square heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["photography", "web"]'>--}}
-{{--                                <a href="#!portfolio-item-11.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 11" src="{{asset('front/theme-luiza/images/placeholders/500x400-1.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Image</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-picture-o heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                            <div class="item col-md-3 col-sm-4 col-xs-6" data-groups='["web", "design"]'>--}}
-{{--                                <a href="#!portfolio-item-12.html" class="hover-overlay">--}}
-{{--                                    <img alt="Project 12" src="{{asset('front/theme-luiza/images/placeholders/500x400-2.jpg')}}" />--}}
-{{--                                    <div class="overlay background-90-a">--}}
-{{--                                        <div class="hidden-xs">--}}
-{{--                                            <p class="title heading-a">Slider</p>--}}
-{{--                                            <p class="text-center heading-a"><strong>Excepteur sint lorem ipsum dolor sit amet consectetur.</strong></p>--}}
-{{--                                            <p class="text-center"><i class="fa fa-th heading-a"></i></p>--}}
-{{--                                        </div>--}}
-{{--                                    </div>--}}
-{{--                                </a>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
 
 <section id="process">
     <div class="view">

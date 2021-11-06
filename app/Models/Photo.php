@@ -11,6 +11,7 @@ class Photo extends Model
     protected $fillable = [
         'file',
         'WxH',
+        'is_active',
         'post_id',
         'credential_id',
         'home_page_id',
