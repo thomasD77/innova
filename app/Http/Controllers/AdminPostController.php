@@ -58,6 +58,7 @@ class AdminPostController extends Controller
         $post->postcategory_id = $request->postcategory_id;
         $post->user_id = Auth::user()->id;
         $post->book = $request->datePost;
+        $post['slug'] = Str::slug($request->title, '-');
 
         $post->save();
 
@@ -98,7 +99,7 @@ class AdminPostController extends Controller
         }
 
 
-        $post['slug'] = Str::slug($request->title, '-');
+
 
 
         Toastr::success('Post Successfully Saved');
@@ -152,6 +153,7 @@ class AdminPostController extends Controller
         $post->body = $request->body;
         $post->postcategory_id = $request->postcategory_id;
         $post->book = $request->datePost;
+        $post['slug'] = Str::slug($request->title, '-');
         $post->update();
 
 
@@ -195,7 +197,6 @@ class AdminPostController extends Controller
             }
         }
 
-        $post['slug'] = Str::slug($request->title, '-');
 
         Toastr::success('Post Successfully Updated');
 

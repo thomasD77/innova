@@ -67,59 +67,59 @@
     <!-- END Post Content -->
 
     <!-- Page Content -->
-    <div class="content">
+{{--    <div class="content">--}}
 
-        @livewire('post-checkbox', ['post' => $post])
+{{--        @livewire('post-checkbox', ['post' => $post])--}}
 
-        <!-- Comment Section -->
-        <div class="block block-rounded">
-            <div class="block-header block-header-default">
-                <h3 class="block-title">Please share your thoughts with us!</h3>
-                <div class="block-options">
-                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>
-                </div>
-            </div>
-            <div class="block-content">
-                <table class="table table-borderless">
-                    <tbody>
-                    <tr class="table-active" id="forum-reply-form">
-                        <td class="d-none d-sm-table-cell"></td>
-                        <td class="fs-sm text-muted">
-                            <a class="fw-semibold" href="be_pages_generic_profile.php"><?php echo Auth::user()->name ?></a> type your comment
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="d-none d-sm-table-cell text-center">
-                            <p>
-                                <img class="rounded-circle" height="62" width="62" src="<?php echo Auth::user()->avatar ? asset('/') . Auth::user()->avatar->file : 'http://placehold.it/62x62' ?>" alt="">
+{{--        <!-- Comment Section -->--}}
+{{--        <div class="block block-rounded">--}}
+{{--            <div class="block-header block-header-default">--}}
+{{--                <h3 class="block-title">Please share your thoughts with us!</h3>--}}
+{{--                <div class="block-options">--}}
+{{--                    <button type="button" class="btn-block-option" data-toggle="block-option" data-action="fullscreen_toggle"></button>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--            <div class="block-content">--}}
+{{--                <table class="table table-borderless">--}}
+{{--                    <tbody>--}}
+{{--                    <tr class="table-active" id="forum-reply-form">--}}
+{{--                        <td class="d-none d-sm-table-cell"></td>--}}
+{{--                        <td class="fs-sm text-muted">--}}
+{{--                            <a class="fw-semibold" href="be_pages_generic_profile.php"><?php echo Auth::user()->name ?></a> type your comment--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
+{{--                    <tr>--}}
+{{--                        <td class="d-none d-sm-table-cell text-center">--}}
+{{--                            <p>--}}
+{{--                                <img class="rounded-circle" height="62" width="62" src="<?php echo Auth::user()->avatar ? asset('/') . Auth::user()->avatar->file : 'http://placehold.it/62x62' ?>" alt="">--}}
 
-                            </p>
-                            <p class="fs-sm fw-medium"><?php echo (Auth::user()->posts->count() . " " . 'Posts') ?></p>
-                        </td>
-                        <td>
-                            {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\AdminCommentController@store']) !!}
-                            <div class="form-group  mb-4">
-                                {!! Form::textarea('body',null,['class'=>'form-control', 'id'=>'js-ckeditor5-classic']) !!}
-                                @error('body')
-                                <p class="text-danger mt-2"> {{ $message }}</p>
-                                @enderror
-                                {{ Form::hidden('post_id', $post->id) }}
-                            </div>
-                            <div class="d-flex justify-content-end">
-                                <div class="form-group mr-1">
-                                    {!! Form::button('<i class="far fa-comment me-1 opacity-50"></i> Comment',['type'=>'submit','class'=>'btn btn-alt-primary']) !!}
-                                </div>
-                            {!! Form::close() !!}
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <!-- END Comment -->
+{{--                            </p>--}}
+{{--                            <p class="fs-sm fw-medium"><?php echo (Auth::user()->posts->count() . " " . 'Posts') ?></p>--}}
+{{--                        </td>--}}
+{{--                        <td>--}}
+{{--                            {!! Form::open(['method'=>'POST', 'action'=>'App\Http\Controllers\AdminCommentController@store']) !!}--}}
+{{--                            <div class="form-group  mb-4">--}}
+{{--                                {!! Form::textarea('body',null,['class'=>'form-control', 'id'=>'js-ckeditor5-classic']) !!}--}}
+{{--                                @error('body')--}}
+{{--                                <p class="text-danger mt-2"> {{ $message }}</p>--}}
+{{--                                @enderror--}}
+{{--                                {{ Form::hidden('post_id', $post->id) }}--}}
+{{--                            </div>--}}
+{{--                            <div class="d-flex justify-content-end">--}}
+{{--                                <div class="form-group mr-1">--}}
+{{--                                    {!! Form::button('<i class="far fa-comment me-1 opacity-50"></i> Comment',['type'=>'submit','class'=>'btn btn-alt-primary']) !!}--}}
+{{--                                </div>--}}
+{{--                            {!! Form::close() !!}--}}
+{{--                        </td>--}}
+{{--                    </tr>--}}
+{{--                    </tbody>--}}
+{{--                </table>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        <!-- END Comment -->--}}
 
 
-    </div>
+{{--    </div>--}}
     <!-- END Page Content -->
 </div>
 

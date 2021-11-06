@@ -45,15 +45,15 @@
     </div>
 </div>
 <div class="page-border bottom colors-e background-solid"><a href="#top" class="hover-effect">To <span class="highlight">Top</span></a></div>
-<div class="page-border left colors-e background-solid">
-    <ul>
-        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
-        <li><a href="http://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>
-        <li><a href="https://vimeo.com/" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>
-        <li><a href="http://www.skype.com/" target="_blank"><i class="fa fa-skype"></i></a></li>
-    </ul>
-</div>
+{{--<div class="page-border left colors-e background-solid">--}}
+{{--    <ul>--}}
+{{--        <li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>--}}
+{{--        <li><a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>--}}
+{{--        <li><a href="http://www.youtube.com/" target="_blank"><i class="fa fa-youtube"></i></a></li>--}}
+{{--        <li><a href="https://vimeo.com/" target="_blank"><i class="fa fa-vimeo-square"></i></a></li>--}}
+{{--        <li><a href="http://www.skype.com/" target="_blank"><i class="fa fa-skype"></i></a></li>--}}
+{{--    </ul>--}}
+{{--</div>--}}
 <!-- BEGIN: Top menu -->
 <div class="page-border right colors-e background-solid"></div>
 <nav class="navbar navbar-default navbar-fixed-top page-transition colors-e background-solid" role="navigation" id="top-nav">
@@ -61,7 +61,7 @@
         <div class="navbar-header">
             <a class="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a>
             <a class="menu-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#"><span></span></a>
-            <a class="navbar-brand" href="">INNO<span class="highlight">VA</span></a>
+            <a class="navbar-brand text-uppercase" href="{{ route('home') }}">{{ substr_replace($company->companyName, "", -2) }}<span class="highlight">{{ substr($company->companyName, -2) }}</span></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

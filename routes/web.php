@@ -38,6 +38,7 @@ Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name
 Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->name('blog');
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
 Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
+Route::get('/system/{page}', [App\Http\Controllers\SystemPagesController::class, 'index'])->name('system');
 
 
 

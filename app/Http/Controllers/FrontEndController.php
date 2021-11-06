@@ -28,12 +28,15 @@ class FrontEndController extends Controller
             ->where('home_page_id', $data->id)
             ->get();
 
-
         $contents = Content::all();
 
         $company = CompanyCredential::first();
 
         $posts = Post::query()
+            ->with(['photos', 'postcategory'])
+            ->where('archived', 0)
+            ->where('book' ,'!=', 0)
+            ->where('book' ,'<', now()->addHour()->format('Y-m-d\TH:i'))
             ->latest()
             ->take(4)
             ->get();
@@ -52,13 +55,23 @@ class FrontEndController extends Controller
         $posts = Post::query()
             ->with(['photos', 'postcategory'])
             ->where('archived', 0)
+            ->where('book' ,'!=', 0)
+            ->where('book' ,'<', now()->addHour()->format('Y-m-d\TH:i'))
             ->latest()
             ->paginate(4);
 
-        $postcategories = PostCategory::latest()->take(30)->get();
-        $recentposts = Post::latest()->take(30)->get();
+        $postcategories = PostCategory::query()
+            ->latest()
+            ->take(30)
+            ->get();
+
+        $recentposts = Post::query()
+            ->latest()
+            ->take(30)
+            ->get();
 
         $company = CompanyCredential::first();
+
         return view('front.blog', compact('company', 'posts', 'postcategories', 'recentposts'));
     }
 
@@ -73,11 +86,26 @@ class FrontEndController extends Controller
         //
         $post = Post::where('slug', $slug)->first();
 
-        $postcategories = PostCategory::latest()->take(30)->get();
-        $recentposts = Post::latest()->take(30)->get();
+        $postcategories = PostCategory::query()
+            ->latest()
+            ->take(30)
+            ->get();
+
+        $recentposts = Post::query()
+            ->latest()
+            ->take(30)
+            ->get();
 
         $company = CompanyCredential::first();
-        $posts = Post::latest()->take(4)->get();
+
+        $posts = Post::query()
+            ->with(['photos', 'postcategory'])
+            ->where('archived', 0)
+            ->where('book' ,'!=', 0)
+            ->where('book' ,'<', now()->addHour()->format('Y-m-d\TH:i'))
+            ->latest()
+            ->take(4)
+            ->get();
 
         return view('front.post', compact('post', 'postcategories', 'recentposts', 'company', 'posts'));
     }
@@ -85,7 +113,16 @@ class FrontEndController extends Controller
     public function bedankt()
     {
         $company = CompanyCredential::first();
-        $posts = Post::latest()->take(4)->get();
+
+        $posts = Post::query()
+            ->with(['photos', 'postcategory'])
+            ->where('archived', 0)
+            ->where('book' ,'!=', 0)
+            ->where('book' ,'<', now()->addHour()->format('Y-m-d\TH:i'))
+            ->latest()
+            ->take(4)
+            ->get();
+
         return view('front.bedankt', compact('company', 'posts'));
     }
 

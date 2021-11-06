@@ -61,7 +61,7 @@
               </div>
               <div class="col-6 form-group mb-4">
                   {!! Form::label('Select Publish Date:') !!}
-                  <input id="datePost" name="datePost" type="date" class="form-control" value="{{$post->book}}"
+                  <input id="datePost" name="datePost" type="datetime-local" class="form-control" value="{{$post->book}}"
                          placeholder="Select date submission" data-inline="month" data-enable-time="false">
               </div>
               <div class="form-group  mb-4">
@@ -71,7 +71,6 @@
                   <p class="text-danger mt-2"> {{ $message }}</p>
                   @enderror
               </div>
-
               <div class="mb-4">
               <label class="form-label">Photo</label>
 

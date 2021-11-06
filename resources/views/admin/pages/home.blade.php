@@ -113,7 +113,7 @@
 
         <div class="block block-rounded">
             <h3 class="mt-4 text-uppercase">Quote</h3>
-            @include('admin.includes.content-value2', ['parent_id' => 'quotes'])
+            @include('admin.includes.content-value6', ['parent_id' => 'quotes'])
         </div>
 
         <div class="block block-rounded">
@@ -123,7 +123,7 @@
 
         <div class="block block-rounded">
             <h3 class="mt-4 text-uppercase">OUR NUMBERS</h3>
-            @include('admin.includes.content-value3', ['parent_id' => 'numbers'])
+            @include('admin.includes.content-value5', ['parent_id' => 'numbers'])
         </div>
 
         <div class="block block-rounded">

@@ -50,7 +50,7 @@
                             @endif
                         </div>
                         <div class="center-block">
-                            <p style="align-items: center">{{ $posts->links() }}</p>
+                            {{ $posts->links() }}
                         </div>
                 </div>
 
@@ -59,7 +59,7 @@
                         <ul>
                             @if($recentposts)
                                 @foreach($recentposts as $post)
-                                    <li><a href="">{{ $post->title }}</a></li>
+                                    <li><a href="{{ route('post', $post->slug) }}">{{ $post->title }}</a></li>
                                 @endforeach
                             @endif
                         </ul>

@@ -162,25 +162,25 @@ use Illuminate\Support\Facades\Auth;
                       </ul>
                   </li>
 
-                  <li class="nav-main-heading text-uppercase">USER INTERFACE</li>
-                  <li class="nav-main-item <?php echo request()->is('pages/*') ? ' open' : '' ?>">
-                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">
-                          <i class="nav-main-link-icon  fa fa-users"></i>
-                          <span class="nav-main-link-name ">Users</span>
-                      </a>
-                      <ul class="nav-main-submenu">
-                          <li class="nav-main-item">
-                              <a class="nav-main-link<?php echo request()->is('pages/datatables') ? ' active' : '' ?>" href="<?php echo route('users.index') ?>">
-                                  <span class="nav-main-link-name">Data</span>
-                              </a>
-                          </li>
-                          <li class="nav-main-item">
-                              <a class="nav-main-link<?php echo request()->is('pages/slick') ? ' active' : '' ?>" href=" <?php echo route('roles.index')  ?>">
-                                  <span class="nav-main-link-name">Roles</span>
-                              </a>
-                          </li>
-                      </ul>
-                  </li>
+<!--                  <li class="nav-main-heading text-uppercase">USER INTERFACE</li>-->
+<!--                  <li class="nav-main-item --><?php //echo request()->is('pages/*') ? ' open' : '' ?><!--">-->
+<!--                      <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="true" href="#">-->
+<!--                          <i class="nav-main-link-icon  fa fa-users"></i>-->
+<!--                          <span class="nav-main-link-name ">Users</span>-->
+<!--                      </a>-->
+<!--                      <ul class="nav-main-submenu">-->
+<!--                          <li class="nav-main-item">-->
+<!--                              <a class="nav-main-link--><?php //echo request()->is('pages/datatables') ? ' active' : '' ?><!--" href="--><?php //echo route('users.index') ?><!--">-->
+<!--                                  <span class="nav-main-link-name">Data</span>-->
+<!--                              </a>-->
+<!--                          </li>-->
+<!--                          <li class="nav-main-item">-->
+<!--                              <a class="nav-main-link--><?php //echo request()->is('pages/slick') ? ' active' : '' ?><!--" href=" --><?php //echo route('roles.index')  ?><!--">-->
+<!--                                  <span class="nav-main-link-name">Roles</span>-->
+<!--                              </a>-->
+<!--                          </li>-->
+<!--                      </ul>-->
+<!--                  </li>-->
 
 <!--                  <li class="nav-main-heading text-uppercase">AGENDA</li>-->
 <!--                  <li class="nav-main-item --><?php //echo request()->is('pages/*') ? ' open' : '' ?><!--">-->
