@@ -7,8 +7,8 @@
         $company = \App\Models\CompanyCredential::find(1)
     @endphp
     <title>{{ $company->companyName }}</title>
-    <meta name="description" content="Onepage Parallax Site" />
-    <meta name="keywords" content="onepage, parallax" />
+    <meta name="description" content="Innova website" />
+    <meta name="keywords" content="Innova OnePage Website" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="{{asset('front/theme-luiza/bower_components/fontawesome/css/font-awesome.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/theme-luiza/bower_components/animate.css/animate.min.css')}}"/>
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="{{asset('front/theme-luiza/lib/linecons/style.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/theme-luiza/styles/style.min.css')}}"/>
     <link rel="stylesheet" href="{{asset('front/theme-luiza/theme-custom.css')}}"/>
-    <link rel="shortcut icon" href="{{asset('front/theme-luiza/favicon.ico')}}" type="image/x-icon"/>
+    <link rel="shortcut icon" href="{{asset('front/theme-luiza/images/placeholders/logo.png')}}" type="image/x-icon"/>
     <link rel="apple-touch-icon" href="{{asset('front/theme-luiza/apple-touch-icon.png')}}"/>
     <link rel="apple-touch-icon" sizes="57x57" href="{{asset('front/theme-luiza/apple-touch-icon-57x57.png')}}"/>
     <link rel="apple-touch-icon" sizes="72x72" href="{{asset('front/theme-luiza/apple-touch-icon-72x72.png')}}"/>
