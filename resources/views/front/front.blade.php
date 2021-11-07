@@ -1,7 +1,7 @@
 @extends('front.master-front')
 @section('content')
 
-<!-- BEGIN: Page content -->
+
 <section id="home">
     <div class="view">
         <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_5-min.jpg')}}" />
@@ -272,7 +272,7 @@
 </section>
 
 @include('front.includes.contactformulier')
-<!-- END: Page content -->
+
 
 @endsection
 
