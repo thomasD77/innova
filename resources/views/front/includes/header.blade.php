@@ -59,7 +59,7 @@
 <nav class="navbar navbar-default navbar-fixed-top page-transition colors-e background-solid" role="navigation" id="top-nav">
     <div class="container">
         <div class="navbar-header">
-            <a class="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a>
+{{--            <a class="menu-toggle ext-nav-toggle visible-xs-block" data-target=".ext-nav" href="#"><span></span></a>--}}
             <a class="menu-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" href="#"><span></span></a>
             <a class="navbar-brand text-uppercase" href="{{ route('home') }}">{{ substr_replace($company->companyName, "", -2) }}<span class="highlight">{{ substr($company->companyName, -2) }}</span></a>
         </div>
