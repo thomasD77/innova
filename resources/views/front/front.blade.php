@@ -52,6 +52,7 @@
         <div class="content colors-e background-solid">
             <div class="container">
                 <h2>About</h2>
+                <h1>test</h1>
                 <p class="header-details"><span class="highlight">We Create</span> Awesome Stuff</p>
                 <p class="lead">{{ $data->text_1 }}</p>
                 <div class="row">
