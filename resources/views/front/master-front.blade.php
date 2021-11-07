@@ -2,7 +2,7 @@
 
 @include('front.includes.header')
 
-    //Page content
+   
     @yield('content')
 
 
