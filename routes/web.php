@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CalenderController;
 use App\Http\Controllers\FullCalendarController;
+use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -39,7 +40,6 @@ Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->n
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
 Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
 Route::get('/system/{page}', [App\Http\Controllers\SystemPagesController::class, 'index'])->name('system');
-
 
 
 // Backend Routes

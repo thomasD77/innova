@@ -5,7 +5,10 @@ namespace App\Http\Controllers;
 use App\Exports\ContactExport;
 use App\Exports\SubmissionExport;
 use App\Models\Submission;
+use App\Models\User;
+use App\Notifications\ContactFormNotification;
 use Illuminate\Http\Request;
+use Notification;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Session;
 use Maatwebsite\Excel\Facades\Excel;
@@ -64,6 +67,10 @@ class AdminSubmissionController extends Controller
 
                 Submission::create($data);
             }
+
+            $user = User::where('email', config('custom.MAIL_TO_NOTIFICATION'))->first();
+            $user->notify(new ContactFormNotification());
+
             return redirect('/bedankt');
         }
         return redirect()->back();
