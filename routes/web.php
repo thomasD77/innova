@@ -40,6 +40,7 @@ Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->n
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
 Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
 Route::get('/system/{page}', [App\Http\Controllers\SystemPagesController::class, 'index'])->name('system');
+Route::resource('submissions', App\Http\Controllers\AdminSubmissionController::class);
 
 
 // Backend Routes
@@ -72,7 +73,6 @@ Route::group(['prefix'=>'admin', 'middleware'=>[ 'auth', 'verified']], function(
     Route::get('faqs/delete/{id}', 'App\Http\Controllers\AdminFaqController@destroy')->name('faqs.delete');
 
     //Submissions Routes
-    Route::resource('submissions', App\Http\Controllers\AdminSubmissionController::class);
     Route::get('/export/submissons', [App\Http\Controllers\AdminSubmissionController::class, 'export'])->name('submissions.export');
     Route::get('archive/submissions', 'App\Http\Controllers\AdminSubmissionController@archive')->name('submission.archive');
 
