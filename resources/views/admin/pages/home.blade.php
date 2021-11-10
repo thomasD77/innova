@@ -78,11 +78,11 @@
                     <textarea class="form-control js-ckeditor5-classic"  name="text_7" >{{ $credential->text_7 }}</textarea>
                 </div>
 
-{{--                <h2>CONTACT PAGE:</h2>--}}
-{{--                <div class="mb-4">--}}
-{{--                    <label class="form-label" for="text_1">Subtitle</label>--}}
-{{--                    <textarea class="form-control js-ckeditor5-classic"  name="text_8" >{{ $credential->text_8 }}</textarea>--}}
-{{--                </div>--}}
+                <h2>CONTACT PAGE:</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Subtitle</label>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_8" >{{ $credential->text_8 }}</textarea>
+                </div>
 
 
             <div class="my-4">

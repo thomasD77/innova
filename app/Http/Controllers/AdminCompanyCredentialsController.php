@@ -78,7 +78,6 @@ class AdminCompanyCredentialsController extends Controller
     public function update(Request $request, $id)
     {
         //
-
         $creditential = CompanyCredential::findOrFail($id);
         $creditential->firstname = $request->company_firstname;
         $creditential->lastname = $request->company_lastname;
