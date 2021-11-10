@@ -105,7 +105,7 @@
     <div class="view">
         <div class="content colors-e background-solid">
             <div class="container">
-                <h2>FOUNDER</h2>
+                <h2>TEAM</h2>
                 <p class="header-details"><span class="highlight">Who </span>We Are</p>
                 <p class="lead">{{ $data->text_3 }}</p>
                 <div class="row">
@@ -122,7 +122,7 @@
                             <p>
                                 <span class="title">Demeulenaere Thomas</span>
                                 <br/>
-                                <span class="highlight">CEO &amp; Founder</span>
+                                <span class="highlight">Founder</span>
                             </p>
                         </div>
                     </div>
