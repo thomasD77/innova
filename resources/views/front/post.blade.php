@@ -20,8 +20,8 @@
                         <div style="margin-top: 15px" class="row post">
                             @if($post)
                                 <div class="col-md-3 post-meta">
-                                    <div class="post-day">{{ $post->created_at->format('d') }}</div>
-                                    <div class="post-month">{{ $post->created_at->format('M-y') }}</div>
+                                    <div class="post-day">{{ \Illuminate\Support\Carbon::parse($post->book)->format('d') }}</div>
+                                    <div class="post-month">{{ \Illuminate\Support\Carbon::parse($post->book)->format('M-y') }}</div>
                                 </div>
                                 <div class="col-md-9">
                                     <div class="post-body background-10-b">
