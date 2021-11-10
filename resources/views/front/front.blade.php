@@ -194,7 +194,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <p class="text-center">{{ $data->text_6 }}</p>
-                        <a class="text-center" href="{{ route('contact') }}">Contact Us</a>
+                        <a class="text-center" href="{{ route('contact') }}"><p class="text-center">Contact Us</p></a>
                     </div>
                 </div>
             </div>
