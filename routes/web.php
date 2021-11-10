@@ -37,6 +37,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //Frontend Routes
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
 Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->name('blog');
+Route::get('/contact', [App\Http\Controllers\FrontEndController::class, 'contact'])->name('contact');
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
 Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
 Route::get('/system/{page}', [App\Http\Controllers\SystemPagesController::class, 'index'])->name('system');

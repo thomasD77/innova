@@ -70,7 +70,7 @@
                 <li><a href="{{ route('home') }}#services" class="hover-effect">Services</a></li>
                 <li><a href="{{ route('home') }}#process" class="hover-effect">Process</a></li>
                 <li><a href="{{ route('blog') }}" class="hover-effect">Blog</a></li>
-                <li><a href="{{ route('home') }}#contact" class="hover-effect">Contact</a></li>
+                <li><a href="{{ route('contact') }}" class="hover-effect">Contact</a></li>
             </ul>
         </div>
     </div>

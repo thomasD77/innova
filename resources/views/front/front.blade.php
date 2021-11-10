@@ -17,7 +17,7 @@
                         </p>
                     </div>
                 </div>
-                <p class="text-center"><a href="#about" class="button background-60-d heading-d border-hard">About Us</a><a href="#contact" class="button background-60-f heading-f border-hard">Contact Us</a></p>
+                <p class="text-center"><a href="#about" class="button background-60-d heading-d border-hard">About Us</a><a href="{{ route('contact') }}" class="button background-60-f heading-f border-hard">Contact Us</a></p>
             </div>
         </div>
     </div>
@@ -270,9 +270,6 @@
         </div>
     </div>
 </section>
-
-@include('front.includes.contactformulier')
-
 
 @endsection
 

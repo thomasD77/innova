@@ -23,7 +23,7 @@
                     <li><a href="{{ route('home') }}#about">About</a></li>
                     <li><a href="{{ route('home') }}#services">Services</a></li>
                     <li><a href="{{ route('home') }}#process">Process</a></li>
-                    <li><a href="{{ route('home') }}#contact">Contact</a></li>
+                    <li><a href="{{ route('contact') }}">Contact</a></li>
                 </ul>
             </div>
             <div class="col-md-3">

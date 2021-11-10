@@ -110,6 +110,26 @@ class FrontEndController extends Controller
         return view('front.post', compact('post', 'postcategories', 'recentposts', 'company', 'posts'));
     }
 
+    public function contact()
+    {
+        //
+        $data = HomePage::query()
+            ->latest()
+            ->first();
+
+        $posts = Post::query()
+            ->with(['photos', 'postcategory'])
+            ->where('archived', 0)
+            ->where('book' ,'!=', 0)
+            ->where('book' ,'<', now()->addHour()->format('Y-m-d\TH:i'))
+            ->latest()
+            ->paginate(4);
+
+        $company = CompanyCredential::first();
+
+        return view('front.contact', compact('company', 'posts', 'data'));
+    }
+
     public function bedankt()
     {
         $company = CompanyCredential::first();

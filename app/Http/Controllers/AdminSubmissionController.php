@@ -66,11 +66,17 @@ class AdminSubmissionController extends Controller
                 ];
 
                 Submission::create($data);
+
+                $roles = ['superAdmin', 'admin', 'employee'];
+                $users = User::query()
+                        ->with([ 'roles'])
+                        ->whereHas('roles', function($q) use($roles) {
+                        $q->whereIn('name', $roles);})
+                        ->where('archived', 0)
+                        ->get();
+
+                Notification::send($users, new ContactFormNotification($data));
             }
-
-            $user = User::where('email', config('custom.MAIL_TO_NOTIFICATION'))->first();
-            $user->notify(new ContactFormNotification());
-
             return redirect('/bedankt');
         }
         return redirect()->back();
