@@ -6,6 +6,7 @@
     <div class="view">
         <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_10.jpg')}}" />
         <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_11.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_12.jpg')}}" />
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
                 <h2><span class="thin-font-weight f">We <span class="highlight">Are</span></span></h2>
@@ -219,7 +220,7 @@
                 </div>
             </div>
             <div class="container">
-                <p class="text-center ">Donec vulputate sit amet dolor vel pharetra donec pharetra.</p>
+                <p class="text-center ">Know your numbers' is a fundamental precept of business - Bill Gates -</p>
             </div>
         </div>
     </div>
