@@ -5,8 +5,8 @@
 <section id="home">
     <div class="view">
         <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_10.jpg')}}" />
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_11.jpg')}}" />
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_12.jpg')}}" />
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_11.jpg')}}" />--}}
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_12.jpg')}}" />--}}
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
                 <h2><span class="thin-font-weight f">We <span class="highlight">Are</span></span></h2>
