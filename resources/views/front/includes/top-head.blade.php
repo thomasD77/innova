@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-US" class="background-100-e">
 <head>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-EBB030QMRB');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     @php
@@ -28,4 +35,6 @@
     <link rel="apple-touch-icon" sizes="120x120" href="{{asset('front/theme-luiza/apple-touch-icon-120x120.png')}}"/>
     <link rel="apple-touch-icon" sizes="144x144" href="{{asset('front/theme-luiza/apple-touch-icon-144x144.png')}}"/>
     <link rel="apple-touch-icon" sizes="152x152" href="{{asset('front/theme-luiza/apple-touch-icon-152x152.png')}}"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EBB030QMRB"></script>
 </head>
