@@ -4,7 +4,7 @@
 <section>
     <div class="view">
         <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/blog-min.jpg')}}" />
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/blog_2-min.jpg')}}" />
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/blog_2-min.jpg')}}" />--}}
         <div class="content half-size colors-a">
             <div class="container">
                 <h2>Our <span class="highlight">Blog</span></h2>

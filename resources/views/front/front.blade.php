@@ -75,7 +75,8 @@
     </div>
 
     <div class="view" id="how-we-work">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/how_we_work-min.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/bg/how_we_work_2-min.jpg')}}" />
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/how_we_work-min.jpg')}}" />--}}
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/how_we_work_2-min.jpg')}}" />
         <div class="content colors-h">
             <div class="container">
                 <h3><span class="highlight">How</span> We Work</h3>
@@ -154,7 +155,9 @@
         </div>
     </div>
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote-min.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_2-min.jpg')}}" /><img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_3-min.jpg')}}" />
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote-min.jpg')}}" />
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_2-min.jpg')}}" />--}}
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_3-min.jpg')}}" />--}}
         <div class="content half-size colors-h">
             <div class="container">
                 <div class="show-list slogan">
@@ -203,7 +206,7 @@
     </div>
     <div class="view" id="numbers">
         <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/numbers-min.jpg')}}" />
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/numbers_2-min.jpg')}}" />
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/numbers_2-min.jpg')}}" />--}}
         <div class="content half-size colors-h">
             <div class="container-fluid">
                 <h3>Our <span class="highlight">Numbers</span></h3>
