@@ -76,7 +76,8 @@
 
 <script type="application/ld+json">
 { "@context": "https://schema.org",
- "@type": "BlogPosting",
+ "@type": "{{ $category->name }}",
+  "@type": {{ $category->name }},
  "headline": "14 Ways Json Can Improve Your SEO",
  "alternativeHeadline": "and the women who love them",
  "image": "http://example.com/image.jpg",
