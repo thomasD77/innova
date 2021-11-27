@@ -1,4 +1,7 @@
 <body class="state1 background-100-e">
+
+@include('front.includes.tagmanager')
+
 <div class="ext-nav background-95-h page-transition">
     <div class="view half-height">
         <img alt class="bg static" src="{{asset('front/theme-luiza/images/placeholders/1920x1200-2.jpg')}}" />
