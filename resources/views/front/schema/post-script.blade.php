@@ -1,24 +1,22 @@
 <script type="application/ld+json">
-    { "@context": "https://schema.org",
+    {
+    "@context": "https://schema.org",
      "@type": "BlogPosting",
-     "headline": "{{ $post->title }}",
-     "alternativeHeadline": "{{ $post->alternativeTitle }}",
-     "image": "http://example.com/image.jpg",
-     "award": "Best article ever written",
-     "editor": "John Doe",
-     "genre": "search engine optimization",
-     "keywords": "seo sales b2b",
-     "wordcount": "1120",
-     "publisher": "Book Publisher Inc",
-     "url": "http://www.example.com",
-     "datePublished": "2015-09-20",
-     "dateCreated": "2015-09-20",
-     "dateModified": "2015-09-20",
-     "description": "We love to do stuff to help people and stuff",
-     "articleBody": "You can paste your entire post in here, and yes it can get really really long.",
-       "author": {
-        "@type": "Person",
-        "name": "Steve"
-      }
+     "headline": " {{ $post->title }} ",
+     "alternativeHeadline": " {{ $post->alternativeTitle ?? null }} ",
+     "image": " {{ asset('images/posts') . $post->photo->file }} ",
+     "editor": "{{ $company->companyName }}",
+     "genre": " {{ $post->postcategory->name }}",
+     "keywords": "{{ $post->keywords ?? null }}",
+     "wordcount": " {{ $post->wordCount ?? null  }} ",
+     "publisher": "{{ $company->companyName }}",
+     "url": " {{ $post->seo_url ?? null }} ",
+     "datePublished": " {{ $post->book }} ",
+     "dateCreated": "{{ $post->created_at }}",
+     "dateModified": " {{ $post->updated_at }}",
+     "description": " {{ $post->description ?? null }} ",
+     "articleBody": "{{ $post->body }}"
      }
 </script>
+
+
