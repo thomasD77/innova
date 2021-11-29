@@ -17,7 +17,7 @@ class SeoPost extends Migration
         Schema::table('posts', function($table) {
             $table->string('description')->nullable();
             $table->string('alternativeTitle')->nullable();
-            $table->string('Keywords')->nullable();
+            $table->string('keywords')->nullable();
             $table->string('url')->nullable();
             $table->integer('wordCount')->default(0);
         });
