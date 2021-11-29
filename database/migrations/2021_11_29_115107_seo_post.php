@@ -15,11 +15,11 @@ class SeoPost extends Migration
     {
         //
         Schema::table('posts', function($table) {
-            $table->string('seo_description')->nullable();
-            $table->string('seo_alternativeTitle')->nullable();
-            $table->string('seo_keywords')->nullable();
-            $table->string('seo_url')->nullable();
-            $table->integer('seo_wordCount')->default(0);
+            $table->string('description')->nullable();
+            $table->string('alternativeTitle')->nullable();
+            $table->string('Keywords')->nullable();
+            $table->string('url')->nullable();
+            $table->integer('wordCount')->default(0);
         });
     }
 
@@ -32,11 +32,11 @@ class SeoPost extends Migration
     {
         //
         Schema::table('posts', function($table) {
-            $table->dropColumn('seo_description');
-            $table->dropColumn('seo_alternativeTitle');
-            $table->dropColumn('seo_keywords');
-            $table->dropColumn('seo_url');
-            $table->dropColumn('seo_wordCount');
+            $table->dropColumn('description');
+            $table->dropColumn('alternativeTitle');
+            $table->dropColumn('keywords');
+            $table->dropColumn('url');
+            $table->dropColumn('wordCount');
         });
     }
 }

@@ -3,7 +3,7 @@
 { "@context": "https://schema.org",
  "@type": "BlogPosting",
  "headline": "{{ $post->title }}",
- "alternativeHeadline": "{{ $post->seo_alternativeTitle }}",
+ "alternativeHeadline": "{{ $post->alternativeTitle }}",
  "image": "http://example.com/image.jpg",
  "award": "Best article ever written",
  "editor": "John Doe",

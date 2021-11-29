@@ -64,11 +64,11 @@ class AdminPostController extends Controller
         $post['slug'] = Str::slug($request->title, '-');
 
         //SEO fields
-        $post->seo_description = $request->seo_description;
-        $post->seo_alternativeTitle = $request->seo_alternativeTitle;
-        $post->seo_keywords = $request->seo_keywords;
-        $post->seo_url = env('APP_URL') . "/" . "post" . "/" . Str::slug($request->title, '-');
-        $post->seo_wordCount = strlen($request->body . $request->title);
+        $post->description = $request->seo_description;
+        $post->alternativeTitle = $request->seo_alternativeTitle;
+        $post->keywords = $request->seo_keywords;
+        $post->url = env('APP_URL') . "/" . "post" . "/" . Str::slug($request->title, '-');
+        $post->wordCount = strlen($request->body . $request->title);
 
         $post->save();
 
@@ -168,11 +168,11 @@ class AdminPostController extends Controller
         $post['slug'] = Str::slug($request->title, '-');
 
         //SEO fields
-        $post->seo_description = $request->seo_description;
-        $post->seo_alternativeTitle = $request->seo_alternativeTitle;
-        $post->seo_keywords = $request->seo_keywords;
-        $post->seo_url = env('APP_URL') . "/" . "post" . "/" . Str::slug($request->title, '-');
-        $post->seo_wordCount = strlen($request->body . $request->title);
+        $post->description = $request->seo_description;
+        $post->alternativeTitle = $request->seo_alternativeTitle;
+        $post->keywords = $request->seo_keywords;
+        $post->url = env('APP_URL') . "/" . "post" . "/" . Str::slug($request->title, '-');
+        $post->wordCount = strlen($request->body . $request->title);
 
         $post->update();
 
