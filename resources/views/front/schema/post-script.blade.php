@@ -15,11 +15,6 @@
      "dateCreated": "{{ $post->created_at }}",
      "dateModified": " {{ $post->updated_at }}",
      "description": "We love to do stuff to help people and stuff",
-     "articleBody": "{{ $post->body }}",
-       "author": {
-        "@type": "",
-        "name": "{{ $company->companyName }}"
-      }
-     }
+     "articleBody": "{{ $post->body }}" }
     </script>
 @endif
