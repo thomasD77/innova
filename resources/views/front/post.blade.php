@@ -74,6 +74,7 @@
 </section>
 <!-- END: Page content -->
 @if($post)
+    {{ $post->title }}
     <script type="application/ld+json">
 { "@context": "https://schema.org",
  "@type": "BlogPosting",
