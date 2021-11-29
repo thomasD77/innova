@@ -2,8 +2,8 @@
     <script type="application/ld+json">
 { "@context": "https://schema.org",
  "@type": "BlogPosting",
- "headline": "14 Ways Json Can Improve Your SEO",
- "alternativeHeadline": "and the women who love them",
+ "headline": "{{ $post->title }}",
+ "alternativeHeadline": "{{ $post->seo_alternativeTitle }}",
  "image": "http://example.com/image.jpg",
  "award": "Best article ever written",
  "editor": "John Doe",
