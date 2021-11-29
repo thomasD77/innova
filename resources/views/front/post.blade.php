@@ -19,7 +19,9 @@
                     <div class="col-md-9">
                         <div style="margin-top: 15px" class="row post">
                             @if($post)
-                                {{ $post->title }}
+
+                               @include('front.schema.post-script')
+                            
                                 <div class="col-md-3 post-meta">
                                     <div class="post-day">{{ \Illuminate\Support\Carbon::parse($post->book)->format('d') }}</div>
                                     <div class="post-month">{{ \Illuminate\Support\Carbon::parse($post->book)->format('M-y') }}</div>
