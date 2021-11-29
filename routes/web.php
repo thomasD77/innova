@@ -90,6 +90,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>[ 'auth', 'verified']], function(
 
     //General Routes
     Route::get('components', 'App\Http\Controllers\ComponentController@index')->name('components.index');
+    Route::resource('settings', App\Http\Controllers\AccountSettingsController::class);
 
     //Clients Routes
     Route::resource('clients', App\Http\Controllers\AdminClientController::class);
