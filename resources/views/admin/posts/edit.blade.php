@@ -117,15 +117,15 @@
                       <h3 class="mt-3">SEO optimalisation</h3>
                       <div class="col-6 form-group mb-4">
                           {!! Form::label('seo_alternativeTitle', 'Alternative Title:') !!}
-                          {!! Form::text('seo_alternativeTitle',$post->seo_alternativeTitle ,['class'=>'form-control']) !!}
+                          {!! Form::text('seo_alternativeTitle',$post->alternativeTitle ,['class'=>'form-control']) !!}
                       </div>
                       <div class="col-6 form-group mb-4">
                           {!! Form::label('seo_description', 'Description Post:') !!}
-                          {!! Form::text('seo_description',$post->seo_description,['class'=>'form-control']) !!}
+                          {!! Form::text('seo_description',$post->description,['class'=>'form-control']) !!}
                       </div>
                       <div class="col-6 form-group mb-4">
                           {!! Form::label('seo_keywords', 'Keywords:') !!}
-                          {!! Form::text('seo_keywords',$post->seo_keywords,['class'=>'form-control']) !!}
+                          {!! Form::text('seo_keywords',$post->keywords,['class'=>'form-control']) !!}
                       </div>
                   @endif
 
