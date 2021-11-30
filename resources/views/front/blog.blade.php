@@ -29,7 +29,7 @@
                                         <div class="post-image">
                                             <div class="slider">
                                                 @foreach($post->photos as $photo)
-                                                <div><img class="fluid-width" alt="Slide 1" src="{{$photo ? asset('images/posts') . $photo->file : 'http://placehold.it/62x62'}}"/></div>
+                                                <a href="{{ route('post', $post->slug) }}"><img class="fluid-width" alt="Slide 1" src="{{$photo ? asset('images/posts') . $photo->file : 'http://placehold.it/62x62'}}"/></a>
                                                 @endforeach
                                             </div>
                                         </div>

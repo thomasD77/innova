@@ -12,6 +12,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="view">
         <div class="content small-top-padding colors-e background-solid">
             <div class="container">
