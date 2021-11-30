@@ -26,7 +26,7 @@
      "{{{ $company->facebook }}}",
      "{{{ $company->instagram }}}",
      "{{{ $company->twitter }}}",
-     "{{{ $company->linkedin }}}",
+     "{{{ $company->linkedin }}}"
      ]}
     </script>
 @endif
