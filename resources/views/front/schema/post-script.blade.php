@@ -5,7 +5,7 @@
              "@type": "BlogPosting",
              "headline": "{{ $post->title }}",
              "alternativeHeadline": "{{ $post->alternativeTitle }}",
-             "image": "http://example.com/image.jpg",
+             "image": "{{ asset('images/posts') . $post->photo->file }}",
              "editor": "{{ $company->companyName }}",
              "genre": "{{ $post->postcategory->name }}",
              "keywords": "{{ $post->keywords }}",
