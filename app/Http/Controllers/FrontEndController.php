@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AccountSettings;
 use App\Models\CompanyCredential;
 use App\Models\Content;
 use App\Models\HomePage;
@@ -98,6 +99,8 @@ class FrontEndController extends Controller
 
         $company = CompanyCredential::first();
 
+        $account = AccountSettings::first()->SEO;
+
         $posts = Post::query()
             ->with(['photos', 'postcategory'])
             ->where('archived', 0)
@@ -107,7 +110,7 @@ class FrontEndController extends Controller
             ->take(4)
             ->get();
 
-        return view('front.post', compact('post', 'postcategories', 'recentposts', 'company', 'posts'));
+        return view('front.post', compact('post', 'postcategories', 'recentposts', 'company', 'posts', 'account'));
     }
 
     public function contact()
