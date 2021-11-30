@@ -5,7 +5,9 @@
 
     @yield('content')
 
+{{--Google SEO--}}
 @include('front.schema.organisation-script')
+@include('front.schema.website-script')
 
 @include('front.includes.footer')
 
