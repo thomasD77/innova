@@ -5,6 +5,7 @@
 
     @yield('content')
 
+@include('front.schema.organisation-script')
 
 @include('front.includes.footer')
 
