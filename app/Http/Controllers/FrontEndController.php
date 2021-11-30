@@ -32,6 +32,7 @@ class FrontEndController extends Controller
         $contents = Content::all();
 
         $company = CompanyCredential::first();
+        $account = AccountSettings::first()->SEO;
 
         $posts = Post::query()
             ->with(['photos', 'postcategory'])
@@ -42,7 +43,7 @@ class FrontEndController extends Controller
             ->take(4)
             ->get();
 
-        return view('front.front', compact('data', 'photos', 'contents', 'company', 'posts'));
+        return view('front.front', compact('data', 'photos', 'contents', 'company', 'posts', 'account'));
     }
 
     /**
@@ -72,8 +73,9 @@ class FrontEndController extends Controller
             ->get();
 
         $company = CompanyCredential::first();
+        $account = AccountSettings::first()->SEO;
 
-        return view('front.blog', compact('company', 'posts', 'postcategories', 'recentposts'));
+        return view('front.blog', compact('company', 'posts', 'postcategories', 'recentposts', 'account'));
     }
 
     /**
@@ -129,13 +131,15 @@ class FrontEndController extends Controller
             ->paginate(4);
 
         $company = CompanyCredential::first();
+        $account = AccountSettings::first()->SEO;
 
-        return view('front.contact', compact('company', 'posts', 'data'));
+        return view('front.contact', compact('company', 'posts', 'data', 'account'));
     }
 
     public function bedankt()
     {
         $company = CompanyCredential::first();
+        $account = AccountSettings::first()->SEO;
 
         $posts = Post::query()
             ->with(['photos', 'postcategory'])
@@ -146,7 +150,7 @@ class FrontEndController extends Controller
             ->take(4)
             ->get();
 
-        return view('front.bedankt', compact('company', 'posts'));
+        return view('front.bedankt', compact('company', 'posts', 'account'));
     }
 
 
