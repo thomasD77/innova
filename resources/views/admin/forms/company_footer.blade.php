@@ -86,7 +86,7 @@
                         </div>
                         <div class="mb-4">
                             <label class="form-label" for="frontend-contact-email">Url </label>
-                            <input type="text" class="form-control" name="company_tagline"
+                            <input type="text" class="form-control" name="company_url"
                                    value="{{ $credential->url }}">
                         </div>
 
