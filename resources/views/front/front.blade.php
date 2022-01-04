@@ -206,9 +206,9 @@
                         </div>
                         <div class="caption">
                             <p>
-                                <span class="title">Demeulenaere Thomas</span>
+                                <span class="title">Huis Zen&Zo</span>
                                 <br/>
-                                <span class="highlight">Founder</span>
+                                <span class="highlight">Yoga/Shiatsu</span>
                             </p>
                         </div>
                     </div>
