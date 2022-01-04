@@ -57,6 +57,20 @@
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
                     <textarea class="form-control js-ckeditor5-classic"  name="text_4" >{{ $credential->text_4 }}</textarea>
+                    <div class="row">
+                        <div class="col-md-3">
+                            @include('admin.includes.image', ['image_id' => 2])
+                        </div>
+                        <div class="col-md-3">
+                            @include('admin.includes.image', ['image_id' => 3])
+                        </div>
+                        <div class="col-md-3">
+                            @include('admin.includes.image', ['image_id' => 4])
+                        </div>
+                        <div class="col-md-3">
+                            @include('admin.includes.image', ['image_id' => 5])
+                        </div>
+                    </div>
                 </div>
 
                 <h2>QUOTE</h2>
@@ -71,6 +85,14 @@
                     <textarea class="form-control js-ckeditor5-classic"  name="text_5" >{{ $credential->text_5 }}</textarea>
                     <textarea class="form-control js-ckeditor5-classic mt-2"  name="text_6" >{{ $credential->text_6 }}</textarea>
                 </div>
+
+                <h2>Work</h2>
+                <div class="mb-4">
+                    <label class="form-label" for="text_1">Subtitle</label>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_3" >{{ $credential->text_9 }}</textarea>
+                </div>
+
+                @include('admin.includes.image', ['image_id' => 6])
 
                 <h2>OUR SKILLS</h2>
                 <div class="mb-4">

@@ -142,9 +142,20 @@
                 <p class="header-details"><span class="highlight">We Are Here</span> For You</p>
                 <p class="lead">{{ $data->text_4 }}</p>
                 <div class="row">
+                    @php
+                        $teller = 1
+                    @endphp
                     @foreach($contents as $content)
                         @if($content->parent_id == 'services')
                             <div class="col-md-3 top-line">
+                                @if($photos->isNotEmpty())
+                                    @if($photos[$teller]->is_active == 1)
+                                        <img class="fluid-width rounded" src="{{$photos[$teller] ? asset('images/content') . $photos[$teller]->file   : 'http://placehold.it/62x62'}}" alt="photo">
+                                    @endif
+                                    @php
+                                        $teller ++
+                                    @endphp
+                                @endif
                                 <h4>{{ $content->title }}</h4>
                                 <p>{!!  $content->text  !!}</p>
                             </div>
@@ -176,6 +187,37 @@
     </div>
 </section>
 
+<section id="Work">
+    <div class="view">
+        <div class="content colors-e background-solid">
+            <div class="container">
+                <h2>OUR WORK</h2>
+                <p class="header-details"><span class="highlight">What </span>We Create</p>
+                <p class="lead">{{ $data->text_9 }}</p>
+                <div class="row">
+                    <div class="col-md-4 col-sm-3"></div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="hover-overlay">
+                            @if($photos->isNotEmpty())
+                                @if($photos[5]->is_active == 1)
+                                    <a href="http://www.huiszenenzo.be" target="_blank"><img class="fluid-width" src="{{$photos[5] ? asset('images/content') . $photos[5]->file   : 'http://placehold.it/62x62'}}" alt="photo"></a>
+                                @endif
+                            @endif
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <span class="title">Demeulenaere Thomas</span>
+                                <br/>
+                                <span class="highlight">Founder</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="process">
     <div class="view">
         <div class="content colors-e background-solid">
@@ -198,7 +240,7 @@
                 <div class="row">
                     <div class="col-md-6 col-md-offset-3">
                         <p class="text-center">{{ $data->text_6 }}</p>
-                        <a class="text-center" href="{{ route('contact') }}"><p class="text-center">Contact Us</p></a>
+                        <a  class="text-center mt-3" href="{{ route('contact') }}"><p style="font-size: 18px" class="text-center">>> Contact Us <<</p></a>
                     </div>
                 </div>
             </div>

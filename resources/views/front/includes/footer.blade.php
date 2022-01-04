@@ -52,7 +52,7 @@
         © {{ now()->year }} All Rights Reserved. {{ $company->companyName }}
         <a href="{{ route('system', 'disclaimer') }}">Disclaimer</a>
         <a href="{{ route('system', 'privacy') }}">Privacy</a>
-        <a href="{{ route('system', 'cookie') }}">Cookie</a>
+{{--        <a href="{{ route('system', 'cookie') }}">Cookie</a>--}}
     </div>
 </footer>
 <!-- END: Footer -->
