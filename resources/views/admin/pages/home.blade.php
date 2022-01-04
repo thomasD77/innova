@@ -89,7 +89,7 @@
                 <h2>Work</h2>
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
-                    <textarea class="form-control js-ckeditor5-classic"  name="text_3" >{{ $credential->text_9 }}</textarea>
+                    <textarea class="form-control js-ckeditor5-classic"  name="text_9" >{{ $credential->text_9 }}</textarea>
                 </div>
 
                 @include('admin.includes.image', ['image_id' => 6])
