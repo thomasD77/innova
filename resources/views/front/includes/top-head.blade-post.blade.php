@@ -51,7 +51,9 @@
     <meta property="og:title" content="Innova Webcreations" />
     <meta property="og:type" content="Business website" />
     <meta property="og:url" content="{{ Request::url() }}"/>
-    <meta property="og:image" content="{{ asset('front/images/bg/how_we_work-min.jpg') }}" />
+    @foreach($post->photos as $photo)
+        <meta property="og:image" content="{{  $photo ? asset('images/posts') . $photo->file : 'http://placehold.it/62x62'}}" />
+    @endforeach
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="og:site_name" content="InnovaWebcreations" />
     <meta property="og:image:type" content="image/jpg" />
