@@ -21,18 +21,18 @@
     <meta name="robots" content="<?php echo $one->robots; ?>">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="<?php echo $one->title; ?>">
-    <meta property="og:site_name" content="<?php echo $one->name; ?>">
-    <meta property="og:description" content="<?php echo $one->description; ?>">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo $one->og_url_site; ?>">
-    <meta property="og:image" content="<?php echo $one->og_url_image; ?>">
+<!--    <meta property="og:title" content="--><?php //echo $one->title; ?><!--">-->
+<!--    <meta property="og:site_name" content="--><?php //echo $one->name; ?><!--">-->
+<!--    <meta property="og:description" content="--><?php //echo $one->description; ?><!--">-->
+<!--    <meta property="og:type" content="website">-->
+<!--    <meta property="og:url" content="--><?php //echo $one->og_url_site; ?><!--">-->
+<!--    <meta property="og:image" content="--><?php //echo $one->og_url_image; ?><!--">-->
 
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
-    <link rel="shortcut icon" href="<?php echo $one->assets_folder; ?>/front/theme-luiza/images/placeholders/logo.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="<?php echo $one->assets_folder; ?>/front/theme-luiza/images/placeholders/logo.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="<?php echo $one->assets_folder; ?>/media/favicons/apple-touch-icon-180x180.png">
+<!--    <link rel="shortcut icon" href="--><?php //echo $one->assets_folder; ?><!--/front/theme-luiza/images/placeholders/logo.png">-->
+<!--    <link rel="icon" type="image/png" sizes="192x192" href="--><?php //echo $one->assets_folder; ?><!--/front/theme-luiza/images/placeholders/logo.png">-->
+<!--    <link rel="apple-touch-icon" sizes="180x180" href="--><?php //echo $one->assets_folder; ?><!--/media/favicons/apple-touch-icon-180x180.png">-->
     <!-- END Icons -->
 
     <!-- Stylesheets -->

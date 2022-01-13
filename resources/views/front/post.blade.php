@@ -1,4 +1,4 @@
-@extends('front.master-front')
+@extends('front.master-front-post')
 @section('content')
 <!-- BEGIN: Page content -->
 <section>
