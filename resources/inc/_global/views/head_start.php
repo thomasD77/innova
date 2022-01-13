@@ -28,6 +28,15 @@
 <!--    <meta property="og:url" content="--><?php //echo $one->og_url_site; ?><!--">-->
 <!--    <meta property="og:image" content="--><?php //echo $one->og_url_image; ?><!--">-->
 
+      <meta property="og:title" content="Innova Webcreations" />
+      <meta property="og:type" content="Business website" />
+      <meta property="og:url" content=""/>
+      <meta property="og:image" content="<?php echo asset('front/images/bg/how_we_work-min.jpg') ?>" />
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="og:site_name" content="InnovaWebcreations" />
+      <meta property="og:image:type" content="image/jpg" />
+      <meta property="og:image:alt" content="Innova Webcreations software bedrijf voor het maken van websites en webshops" />
+
     <!-- Icons -->
     <!-- The following icons can be replaced with your own, they are used by desktop and mobile browsers -->
 <!--    <link rel="shortcut icon" href="--><?php //echo $one->assets_folder; ?><!--/front/theme-luiza/images/placeholders/logo.png">-->
