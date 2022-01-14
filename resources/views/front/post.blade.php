@@ -22,6 +22,9 @@
                         <div style="margin-top: 15px" class="row post">
                             @if($post)
 
+
+                                @include('front.includes.meta')
+
                                 @include('front.schema.post-script')
 
                                 <div class="col-md-3 post-meta">
