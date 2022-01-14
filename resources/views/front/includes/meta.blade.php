@@ -2,7 +2,7 @@
 <meta property="og:type" content="Business website" />
 <meta property="og:url" content="{{ Request::url() }}"/>
 @foreach($post->photos as $photo)
-    {{ dump($photo) }}
+   
     <meta property="og:image" content="{{  $photo ? asset('images/posts') . $photo->file : 'http://placehold.it/62x62'}}" />
 @endforeach
 <meta property="twitter:card" content="summary_large_image" />
