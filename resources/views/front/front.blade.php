@@ -195,7 +195,7 @@
                 <p class="header-details"><span class="highlight">What </span>We Create</p>
                 <p class="lead">{{ $data->text_9 }}</p>
                 <div class="row">
-                    <div class="col-md-4 col-sm-3"></div>
+                    <div class="col-md-2 col-sm-3"></div>
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
                             @if($photos->isNotEmpty())
@@ -209,6 +209,22 @@
                                 <span class="title">Huis Zen&Zo</span>
                                 <br/>
                                 <span class="highlight">Yoga/Shiatsu</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="hover-overlay">
+                            @if($photos->isNotEmpty())
+                                @if($photos[6]->is_active == 1)
+                                    <a href="http://www.kasturi-modeling.be" target="_blank"><img class="fluid-width" src="{{$photos[6] ? asset('images/content') . $photos[6]->file   : 'http://placehold.it/62x62'}}" alt="photo"></a>
+                                @endif
+                            @endif
+                        </div>
+                        <div class="caption">
+                            <p>
+                                <span class="title">Kasturi</span>
+                                <br/>
+                                <span class="highlight">Modeling</span>
                             </p>
                         </div>
                     </div>
