@@ -134,6 +134,41 @@
     </div>
 </section>
 
+<section id="Academy">
+    <div class="view">
+        <div class="content colors-e background-solid">
+            <div class="container">
+                <h2>Academy</h2>
+                <p class="header-details"><span class="highlight">What </span>We Teach</p>
+                <p class="lead">Een nieuwe website, SUPER! Alles is dynamisch aan te passen in het admin gedeelte van uw
+                    webiste/webshop. Dit is voor ons als
+                    software experten dagelijkse kost. Maar voor iemand die hier niet zoveel mee bezig is kan dit
+                    overweldigend zijn. Daarom hebben we bij
+                    Innova de Academy opgezet. Wanneer een klant ingelogd is komt er een extra tab in de navigatie bar
+                    met de naam "Academy".
+                    Op deze pagina maken we custom per klant videos met de belangrijke stappen voor dit project. Zo is
+                    er ook de mogelijkheid
+                    om dit meerdere keren te bekijken tot alles heel duidelijk is. Let op, onze service is steeds
+                    beschikbaar! Dit is enkel een uitbereiding,
+                    een gids door het software landschap. Hieronder een voorbeeld hoe dit werkt:
+                </p>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <iframe
+                                src="https://www.youtube.com/embed/yV3XA_ub910"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                style="width: 100%; height: 500px"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="services">
     <div class="view">
         <div class="content colors-e background-solid">
