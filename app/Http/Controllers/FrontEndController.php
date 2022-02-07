@@ -178,8 +178,7 @@ class FrontEndController extends Controller
         $vcard->addURL('https://www.info@innova-webcreations.be');
         $vcard->addPhoto(asset('images/form_credentials/innova-logo.png'));
         $vcard->addNote('Innova ontwerpt en ontwikkelt innovatieve websites met oog voor design en de nadruk op gebruiksvriendelijkheid. Je toekomstige website is niet enkel mooi, maar adresseert bestaande en potentiële klanten recht naar jouw doel.');
-        // return vcard as a string
-        //return $vcard->getOutput();
+
 
         // return vcard as a download
         return $vcard->download();
