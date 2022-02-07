@@ -173,7 +173,7 @@ class FrontEndController extends Controller
         $vcard->addJobtitle('Software bedrijf');
         //$vcard->addRole('Founder');
         $vcard->addEmail('info@innova-webcreations.be');
-        $vcard->addPhoneNumber(474413669, 'PREF;+32');
+        $vcard->addPhoneNumber('+32474413669', );
         $vcard->addAddress(null, null, 'Roeselaarsestraat', 'Izegem', 'W-VL', '8870', 'Belgium');
         $vcard->addURL('https://www.info@innova-webcreations.be');
         $vcard->addPhoto(asset('images/form_credentials/innova-logo.png'));
