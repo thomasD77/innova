@@ -10,12 +10,22 @@
                 <p class="social-links">
                     <a target="_blank" href="https://www.facebook.com/Innova-Webcreations-107384388503435"><i class="fa fa-facebook"></i></a>
                     <a target="_blank" href="https://www.instagram.com/innovawebcreations/"><i class="fa fa-instagram"></i></a>
-                    <a target="_blank" href="{{ asset('images/vcard/vcard.vcf') }}"><i class="li_note"></i></a>
 {{--                    <a target="_blank" href="http://www.youtube.com/"><i class="fa fa-youtube"></i></a>--}}
 {{--                    <a target="_blank" href="https://vimeo.com/"><i class="fa fa-vimeo-square"></i></a>--}}
 {{--                    <a target="_blank" href="https://www.pinterest.com/"><i class="fa fa-printerest"></i></a>--}}
 {{--                    <a target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>--}}
                 </p>
+                <style>
+                    @media (min-width: 768px){
+                        .contacts {
+                            display: none;
+                        }
+                    }
+                </style>
+                <div class="contacts">
+                    <p>Download Innova Contacts</p>
+                    <a target="_blank" href="{{ asset('images/vcard/vcard.vcf') }}"><i class="li_note fa-2x"></i></a>
+                </div>
             </div>
             <div class="col-md-3">
                 <h5>Additional Links</h5>
