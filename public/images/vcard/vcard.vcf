@@ -1,12 +1,12 @@
 BEGIN:VCARD
 VERSION:3.0
-N:Innova;Webcreations;;;
-FN:Innova Webcreations
+N:Webcreations;Innova;
+FN: Webcreations Innova;
 ORG:Thomas Demeulenaere;
 TITLE:Web agency
-EMAIL;type=INTERNET;type=WORK;type=pref:info@innova-webcreations.be
-TEL;type=WORK;type=pref:+32 474 41 36 69
-item1.ADR;type=WORK:;;2 Roeselaarsestraat 214 ;8870 ;Izegem
+EMAIL;type=INTERNET;type=email;type=pref:info@innova-webcreations.be
+TEL;type=phone;type=pref:+32 474 41 36 69
+item1.ADR;type=address:;;2 Roeselaarsestraat 214 ;8870 ;Izegem
 item1.X-ABADR:België
-NOTE: INNOVA ONTWERPT EN ONTWIKKELT INNOVATIEVE WEBSITES MET OOG VOOR DESIGN EN DE NADRUK OP GEBRUIKSVRIENDELIJKHEID. JE TOEKOMSTIGE WEBSITE IS NIET ENKEL MOOI, MAAR ADRESSEERT BESTAANDE EN POTENTIËLE KLANTEN RECHT NAAR JOUW DOEL.
+NOTE: Innova ontwerpt en ontwikkelt innovatieve websites met oog voor design en de nadruk op gebruiksvriendelijkheid. Je toekomstige website is niet enkel mooi, maar adresseert bestaande en potentiële klanten recht naar houw doel.
 END:VCARD
