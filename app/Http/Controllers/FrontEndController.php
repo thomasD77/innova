@@ -159,8 +159,8 @@ class FrontEndController extends Controller
         $vcard = new VCard();
 
         // define variables
-        $lastname = 'Demeulenaere';
-        $firstname = 'Thomas';
+        $lastname = 'Webcreations';
+        $firstname = 'Innova';
         $additional = '';
         $prefix = '';
         $suffix = '';
@@ -169,13 +169,14 @@ class FrontEndController extends Controller
         $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
 
         // add work data
-        $vcard->addCompany('Innova Webcreations');
+        $vcard->addCompany('Thomas Demeulenaere');
         $vcard->addJobtitle('Software bedrijf');
-        $vcard->addRole('Founder');
+        //$vcard->addRole('Founder');
         $vcard->addEmail('info@innova-webcreations.be');
-        $vcard->addPhoneNumber(123456789, 'PREF;WORK');
-        $vcard->addAddress(null, null, 'Roeselaarsestraat', 'Izegem', null, '8870', 'Belgium');
+        $vcard->addPhoneNumber(474413669, 'PREF;+32');
+        $vcard->addAddress(null, null, 'Roeselaarsestraat', 'Izegem', 'W-VL', '8870', 'Belgium');
         $vcard->addURL('https://www.info@innova-webcreations.be');
+        $vcard->addPhoto(asset('images/form_credentials/innova-logo.png'));
         // return vcard as a string
         //return $vcard->getOutput();
 
