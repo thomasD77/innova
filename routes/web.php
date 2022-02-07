@@ -40,6 +40,7 @@ Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->n
 Route::get('/contact', [App\Http\Controllers\FrontEndController::class, 'contact'])->name('contact');
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
 Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
+Route::get('/vCard', [App\Http\Controllers\FrontEndController::class, 'vCard'])->name('vCard');
 Route::get('/system/{page}', [App\Http\Controllers\SystemPagesController::class, 'index'])->name('system');
 Route::resource('submissions', App\Http\Controllers\AdminSubmissionController::class);
 
@@ -87,6 +88,7 @@ Route::group(['prefix'=>'admin', 'middleware'=>[ 'auth', 'verified']], function(
     Route::post('comments/reply', 'App\Http\Controllers\AdminCommentController@storeReply');
     Route::get('archive/posts', 'App\Http\Controllers\AdminPostController@archive')->name('post.archive');
     Route::get('frontend', 'App\Http\Controllers\AdminPostController@frontend')->name('post.frontend');
+
 
     //General Routes
     Route::get('components', 'App\Http\Controllers\ComponentController@index')->name('components.index');

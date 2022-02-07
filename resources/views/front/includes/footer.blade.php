@@ -24,7 +24,7 @@
                 </style>
                 <div class="contacts">
                     <p>Download Innova Contacts</p>
-                    <a target="_blank" href="{{ asset('images/vcard/vcard.vcf') }}"><i class="li_note fa-2x"></i></a>
+                    <a target="_blank" href="{{ route('vCard')}}"><i class="li_note fa-2x"></i></a>
                 </div>
             </div>
             <div class="col-md-3">

@@ -10,6 +10,7 @@ use App\Models\Photo;
 use App\Models\Post;
 use App\Models\PostCategory;
 use Illuminate\Http\Request;
+use JeroenDesloovere\VCard\VCard;
 
 class FrontEndController extends Controller
 {
@@ -151,6 +152,36 @@ class FrontEndController extends Controller
             ->get();
 
         return view('front.bedankt', compact('company', 'posts', 'account'));
+    }
+
+    public function vCard() {
+        // define vcard
+        $vcard = new VCard();
+
+        // define variables
+        $lastname = 'Demeulenaere';
+        $firstname = 'Thomas';
+        $additional = '';
+        $prefix = '';
+        $suffix = '';
+
+        // add personal data
+        $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
+
+        // add work data
+        $vcard->addCompany('Innova Webcreations');
+        $vcard->addJobtitle('Software bedrijf');
+        $vcard->addRole('Founder');
+        $vcard->addEmail('info@innova-webcreations.be');
+        $vcard->addPhoneNumber(123456789, 'PREF;WORK');
+        $vcard->addAddress(null, null, 'Roeselaarsestraat', 'Izegem', null, '8870', 'Belgium');
+        $vcard->addURL('https://www.info@innova-webcreations.be');
+        // return vcard as a string
+        //return $vcard->getOutput();
+
+        // return vcard as a download
+        return $vcard->download();
+
     }
 
 
