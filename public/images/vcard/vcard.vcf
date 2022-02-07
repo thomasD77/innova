@@ -1,0 +1,15 @@
+BEGIN:VCARD
+VERSION:3.0
+REV:2022-02-07T18:29:42Z
+URL:https://22vcard.com/demo/example/
+NOTE;CHARSET=utf-8:Occaecati ipsum quia est veritatis fugiat qui. Sunt aut 
+ aliquid nobis. Occaecati nemo in exercitationem nesciunt provident ut conse
+ quatur quia natus accusamus est.
+N;CHARSET=utf-8:Example;;;;
+FN;CHARSET=utf-8:Example
+URL;TYPE=Link:https://altumcode.com/
+URL;TYPE=Facebook:https://facebook.com/altumcode
+URL;TYPE=Twitter:https://twitter.com/altumcode
+URL;TYPE=Instagram:https://instagram.com/altumcode
+URL;TYPE=YouTube:https://youtube.com/altumcode
+END:VCARD

@@ -135,6 +135,7 @@
 </section>
 
 <section id="Academy">
+    <div id></div>
     <div class="view">
         <div class="content colors-e background-solid">
             <div class="container">
