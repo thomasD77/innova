@@ -17,7 +17,7 @@
                             <input type="hidden" name="photo" value="{{$photo->id}}">
                         @endif
                     @endif
-                    <img class="rounded-circle" height="150" width="150" src="{{$photo ? asset('images/form_credentials') . $photo->file : 'http://placehold.it/62x62'}}" alt="{{$credential->firstname}}">
+                    <img style="border-radius: 50%" height="150" width="150" src="{{$photo ? asset('images/form_credentials') . $photo->file : 'http://placehold.it/62x62'}}" alt="{{$credential->firstname}}">
                 </div>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Bedrijf</label>
@@ -36,27 +36,27 @@
                 </label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Telefoon</label>
-                <label class="form-control" for="frontend-contact-email" style="color: white !important; text-decoration: none">{{ $credential->mobile }}</label>
+                <label class="form-control" for="frontend-contact-email" style="color: white !important; text-decoration: none; list-style: none">{{ $credential->mobile }}</label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Email</label>
                 <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->email }}</label>
 
-                <a href="">{{ $credential->url }}<label class="form-label mt-3" for="frontend-contact-email" style="color: white; margin-top: 20px">Website</label></a>
+                <a href="">{{ $credential->url }}<label class="form-control" for="frontend-contact-email" style="color: white; margin-top: 20px">Website</label></a>
 
                 <a href="{{ $credential->facebook }}"><label class="form-control" for="frontend-contact-email" style="color: white">Facebook</label></a>
 
                 <a href="{{ $credential->instagram }}"><label class="form-control" for="frontend-contact-email" style="color: white">Instagram</label></a>
 
 
-                <a href="{{ route('nfc-information') }}"><button style="color: black;
+                <a href="{{ route('nfc-information') }}"><button style="color: black; border-radius: 15%;
                 background-color: lightgoldenrodyellow;
                 margin-top: 15px;
                 font-weight: bolder;
                 margin-bottom: 15px;
-                padding-top: 3px;
-                padding-bottom: 3px;
-                padding-left: 5px;
-                padding-right: 5px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 15px;
+                padding-right: 15px;
                 border: none;">Voeg me toe!</button></a>
             </section>
         </div>
