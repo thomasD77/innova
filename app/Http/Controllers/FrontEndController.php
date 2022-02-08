@@ -207,7 +207,7 @@ class FrontEndController extends Controller
         //$vcard->addRole('Founder');
         $vcard->addEmail($credential->email);
         $vcard->addPhoneNumber($credential->mobile );
-        $vcard->addAddress(null, null, $credential->address . $credential->zip . $credential->city);
+        $vcard->addAddress(null, null, $credential->address . " " . $credential->zip . " " . $credential->city);
         $vcard->addURL($credential->url);
         $vcard->addPhoto(asset('images/form_credentials/innova-logo.png'));
         $vcard->addNote('Innova ontwerpt en ontwikkelt innovatieve websites met oog voor design en de nadruk op gebruiksvriendelijkheid. Je toekomstige website is niet enkel mooi, maar adresseert bestaande en potentiële klanten recht naar jouw doel.');

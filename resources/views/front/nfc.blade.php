@@ -17,7 +17,7 @@
                             <input type="hidden" name="photo" value="{{$photo->id}}">
                         @endif
                     @endif
-                    <img class="rounded" height="150" width="150" src="{{$photo ? asset('images/form_credentials') . $photo->file : 'http://placehold.it/62x62'}}" alt="{{$credential->firstname}}">
+                    <img class="rounded-circle" height="150" width="150" src="{{$photo ? asset('images/form_credentials') . $photo->file : 'http://placehold.it/62x62'}}" alt="{{$credential->firstname}}">
                 </div>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Bedrijf</label>
@@ -36,7 +36,7 @@
                 </label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Telefoon</label>
-                <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->mobile }}</label>
+                <label class="form-control" for="frontend-contact-email" style="color: white !important; text-decoration: none">{{ $credential->mobile }}</label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Email</label>
                 <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->email }}</label>
@@ -54,7 +54,12 @@
                 <a href="{{ route('nfc-information') }}"><button style="color: black;
                 background-color: lightgoldenrodyellow;
                 margin-top: 15px;
+                font-weight: bolder;
                 margin-bottom: 15px;
+                padding-top: 3px;
+                padding-bottom: 3px;
+                padding-left: 5px;
+                padding-right: 5px;
                 border: none;">Voeg me toe!</button></a>
             </section>
         </div>
