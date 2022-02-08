@@ -36,7 +36,7 @@
                 </label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Telefoon</label>
-                <label class="form-control" for="frontend-contact-email" style="color: white !important; text-decoration: none; list-style: none">{{ $credential->mobile }}</label>
+                <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->phone }}</label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Email</label>
                 <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->email }}</label>
@@ -48,7 +48,7 @@
                 <a href="{{ $credential->instagram }}"><label class="form-control" for="frontend-contact-email" style="color: white">Instagram</label></a>
 
 
-                <a href="{{ route('nfc-information') }}"><button style="color: black; border-radius: 5%;
+                <a href="{{ route('nfc-information') }}"><button style="color: black;
                 background-color: lightgoldenrodyellow;
                 margin-top: 15px;
                 font-weight: bolder;
