@@ -41,13 +41,10 @@
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Email</label>
                 <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->email }}</label>
 
-                <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Website</label>
-                <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->url }}</label>
+                <a href="">{{ $credential->url }}<label class="form-label mt-3" for="frontend-contact-email" style="color: white; margin-top: 20px">Website</label></a>
 
-                <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Facebook</label>
                 <a href="{{ $credential->facebook }}"><label class="form-control" for="frontend-contact-email" style="color: white">Facebook</label></a>
 
-                <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Instagram</label>
                 <a href="{{ $credential->instagram }}"><label class="form-control" for="frontend-contact-email" style="color: white">Instagram</label></a>
 
 
