@@ -48,7 +48,7 @@
                 <a href="{{ $credential->instagram }}"><label class="form-control" for="frontend-contact-email" style="color: white">Instagram</label></a>
 
 
-                <a href="{{ route('nfc-information') }}"><button style="color: black; border-radius: 25%;
+                <a href="{{ route('nfc-information') }}"><button style="color: black; border-radius: 5%;
                 background-color: lightgoldenrodyellow;
                 margin-top: 15px;
                 font-weight: bolder;
