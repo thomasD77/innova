@@ -41,6 +41,8 @@ Route::get('/contact', [App\Http\Controllers\FrontEndController::class, 'contact
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
 Route::get('/bedankt', [App\Http\Controllers\FrontEndController::class, 'bedankt'])->name('bedankt');
 Route::get('/vCard', [App\Http\Controllers\FrontEndController::class, 'vCard'])->name('vCard');
+Route::get('/nfcCard', [App\Http\Controllers\FrontEndController::class, 'nfcCard'])->name('nfcCard');
+Route::get('/nfc-information', [App\Http\Controllers\FrontEndController::class, 'nfcInformation'])->name('nfc-information');
 Route::get('/system/{page}', [App\Http\Controllers\SystemPagesController::class, 'index'])->name('system');
 Route::resource('submissions', App\Http\Controllers\AdminSubmissionController::class);
 

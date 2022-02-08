@@ -40,9 +40,6 @@
                             </div>
                         </div>
                         <div class="mb-4">
-                            <label class="form-label" for="frontend-contact-email">Company Name</label>
-                            <input type="text" class="form-control" name="company_name"
-                                   value="{{ $credential->companyName }}">
                         </div>
                         <div class="mb-4">
                             <label class="form-label" for="frontend-contact-email">Address </label>

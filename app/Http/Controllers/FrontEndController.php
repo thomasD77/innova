@@ -185,6 +185,46 @@ class FrontEndController extends Controller
 
     }
 
+    public function nfcInformation() {
+        // define vcard
+        $vcard = new VCard();
+
+        $credential = CompanyCredential::latest()->first();
+
+        // define variables
+        $lastname = 'Webcreations';
+        $firstname = 'Innova';
+        $additional = '';
+        $prefix = '';
+        $suffix = '';
+
+        // add personal data
+        $vcard->addName($lastname, $firstname, $additional, $prefix, $suffix);
+
+        // add work data
+        $vcard->addCompany($credential->firstname . " " . $credential->lastname);
+        $vcard->addJobtitle('Software bedrijf');
+        //$vcard->addRole('Founder');
+        $vcard->addEmail($credential->email);
+        $vcard->addPhoneNumber($credential->mobile );
+        $vcard->addAddress(null, null, $credential->address . $credential->zip . $credential->city);
+        $vcard->addURL($credential->url);
+        $vcard->addPhoto(asset('images/form_credentials/innova-logo.png'));
+        $vcard->addNote('Innova ontwerpt en ontwikkelt innovatieve websites met oog voor design en de nadruk op gebruiksvriendelijkheid. Je toekomstige website is niet enkel mooi, maar adresseert bestaande en potentiële klanten recht naar jouw doel.');
+
+
+        // return vcard as a download
+        return $vcard->download();
+
+    }
+
+    public function nfcCard()
+    {
+        $credential = CompanyCredential::latest()->first();
+        $photos = Photo::all();
+        return view('front.nfc', compact('credential', 'photos'));
+    }
+
 
     /**
      * Store a newly created resource in storage.
