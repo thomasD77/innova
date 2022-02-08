@@ -45,10 +45,10 @@
                 <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->url }}</label>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Facebook</label>
-                <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->facebook }}</label>
+                <a href="{{ $credential->facebook }}"><label class="form-control" for="frontend-contact-email" style="color: white">Facebook</label></a>
 
                 <label class="form-label mt-3" for="frontend-contact-email" style="color: white">Instagram</label>
-                <label class="form-control" for="frontend-contact-email" style="color: white">{{ $credential->instagram }}</label>
+                <a href="{{ $credential->instagram }}"><label class="form-control" for="frontend-contact-email" style="color: white">Instagram</label></a>
 
 
                 <a href="{{ route('nfc-information') }}"><button style="color: black;
