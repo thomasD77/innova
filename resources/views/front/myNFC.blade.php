@@ -215,7 +215,7 @@
                             <div class="col-md-3 top-line">
                                 @if($photos->isNotEmpty())
                                     @if($photos[$teller]->is_active == 1)
-                                        <img class="fluid-width rounded" src="{{$photos[$teller] ? asset('images/content') . $photos[$teller]->file   : 'http://placehold.it/62x62'}}" alt="photo">
+                                        <img class="fluid-width rounded" style="border: none" src="{{$photos[$teller] ? asset('images/content') . $photos[$teller]->file   : 'http://placehold.it/62x62'}}" alt="photo">
                                     @endif
                                     @php
                                         $teller ++
