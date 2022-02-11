@@ -9,8 +9,8 @@
 {{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_12.jpg')}}" />--}}
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
-                <h2><span style="color: black" class="thin-font-weight highlight">We <span style="color: black" class="highlight">Are</span></span></h2>
-                <h1 class="text-center" style="color: rgb(195,175,143)">{{ substr_replace($company->companyName, "", -2) }}<span  style="color: black" class="highlight thin-font-weight">{{ substr($company->companyName, -2) }}</span></h1>
+{{--                <h2><span style="color: black" class="thin-font-weight highlight">We <span style="color: black" class="highlight">Are</span></span></h2>--}}
+                <h1 class="text-center" style="color: rgb(195,175,143)">{{ substr_replace($company->companyName, "", -2) }}<span  style="color: white">{{ substr($company->companyName, -2) }}</span></h1>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <p class="title text-center">
