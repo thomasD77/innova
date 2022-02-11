@@ -9,8 +9,8 @@
 {{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_12.jpg')}}" />--}}
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
-                <h2><span class="thin-font-weight f">We <span class="highlight">Are</span></span></h2>
-                <h1 class="text-center">{{ substr_replace($company->companyName, "", -2) }}<span class="highlight thin-font-weight">{{ substr($company->companyName, -2) }}</span></h1>
+                <h2><span style="color: black" class="thin-font-weight highlight">We <span style="color: black" class="highlight">Are</span></span></h2>
+                <h1 class="text-center" style="color: rgb(195,175,143)">{{ substr_replace($company->companyName, "", -2) }}<span  style="color: black" class="highlight thin-font-weight">{{ substr($company->companyName, -2) }}</span></h1>
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <p class="title text-center">
@@ -18,7 +18,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center"  style="color: rgb(195,175,143)">
                     <a target="_blank" href="{{ route('vCard')}}">
                         <button type="button" class="btn btn-default heading border-heading">Get Contacts !</button>
                     </a>
@@ -230,26 +230,7 @@
             </div>
         </div>
     </div>
-    <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote-min.jpg')}}" />
-{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_2-min.jpg')}}" />--}}
-{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/quote_3-min.jpg')}}" />--}}
-        <div class="content half-size colors-h">
-            <div class="container">
-                <div class="show-list slogan">
-                    @foreach($contents as $content)
-                        @if($content->parent_id == "quotes")
-                            <div class="show-item">{{ $content->title }}</div>
-                        @endif
-                    @endforeach
-                </div>
-                <div class="separator"></div>
-                <p class="text-center big-font">
-                    <em>— {{ $data->input_1 }} —</em>
-                </p>
-            </div>
-        </div>
-    </div>
+
 </section>
 
 @endsection
