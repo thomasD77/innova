@@ -47,6 +47,34 @@ class FrontEndController extends Controller
         return view('front.front', compact('data', 'photos', 'contents', 'company', 'posts', 'account'));
     }
 
+    public function myNFC()
+    {
+        //
+        $data = HomePage::query()
+            ->latest()
+            ->first();
+
+        $photos = Photo::query()
+            ->where('home_page_id', $data->id)
+            ->get();
+
+        $contents = Content::all();
+
+        $company = CompanyCredential::first();
+        $account = AccountSettings::first()->SEO;
+
+        $posts = Post::query()
+            ->with(['photos', 'postcategory'])
+            ->where('archived', 0)
+            ->where('book' ,'!=', 0)
+            ->where('book' ,'<', now()->addHour()->format('Y-m-d\TH:i'))
+            ->latest()
+            ->take(4)
+            ->get();
+
+        return view('front.myNFC', compact('data', 'photos', 'contents', 'company', 'posts', 'account'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

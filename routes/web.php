@@ -36,6 +36,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 //Frontend Routes
 Route::get('/', [App\Http\Controllers\FrontEndController::class, 'index'])->name('home');
+Route::get('/myNFC', [App\Http\Controllers\FrontEndController::class, 'myNFC'])->name('myNFC');
 Route::get('/blog', [App\Http\Controllers\FrontEndController::class, 'blog'])->name('blog');
 Route::get('/contact', [App\Http\Controllers\FrontEndController::class, 'contact'])->name('contact');
 Route::get('/post/{slug}', [App\Http\Controllers\FrontEndController::class, 'post'])->name('post');
