@@ -4,8 +4,8 @@
 
 <section id="home">
     <div class="view">
-        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_10.jpg')}}" />
-{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_11.jpg')}}" />--}}
+{{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_10.jpg')}}" />--}}
+        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_11.jpg')}}" />
 {{--        <img alt class="bg" src="{{asset('front/theme-luiza/images/bg/header_img_12.jpg')}}" />--}}
         <div class="content home-suzi full-size colors-d background-0">
             <div class="container">
@@ -14,7 +14,7 @@
                 <div class="row">
                     <div class="col-md-4 col-md-offset-4">
                         <p class="title text-center">
-                            {{ $data->input_2 }}
+{{--                            {{ $data->input_2 }}--}}
                         </p>
                     </div>
                 </div>
