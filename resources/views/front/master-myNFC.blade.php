@@ -1,4 +1,4 @@
-@include('front.includes.top-head')
+@include('front.includes.top-head-myNFC')
 
 @include('front.includes.myNFCheader')
 
@@ -11,4 +11,4 @@
 
 @include('front.includes.footer-myNFC')
 
-@include('front.includes.page-end')
+@include('front.includes.page-end-myNFC')
