@@ -266,7 +266,7 @@
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
 
-                            <a href="https://frituurdeflandrien.be" target="_blank"><img class="fluid-width" src="{{asset('images/content/flandrien.jpg')}}" alt="photo"></a>
+                            <a href="https://frituurdeflandrien.be" target="_blank"><img width="360" height="360" class="fluid-width" src="{{asset('images/content/flandrien.jpg')}}" alt="photo"></a>
 
                         </div>
                         <div class="caption">
