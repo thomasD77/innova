@@ -231,6 +231,7 @@
                 <p class="header-details"><span class="highlight">What </span>We Create</p>
                 <p class="lead">{{ $data->text_9 }}</p>
                 <div class="row">
+                    <div class="col-md-2"></div>
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
                             @if($photos->isNotEmpty())
@@ -260,20 +261,6 @@
                                 <span class="title">Kasturi</span>
                                 <br/>
                                 <span class="highlight">Modeling</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="hover-overlay">
-
-                            <a href="https://www.frituurdeflandrien.be" target="_blank"><img class="fluid-width 100vh" style="height: 100%;"  src="{{ asset('images/content/flandrien.jpg') }}" alt="photo"></a>
-
-                        </div>
-                        <div class="caption">
-                            <p>
-                                <span class="title">De Flandrien</span>
-                                <br/>
-                                <span class="highlight">Food&Beverage</span>
                             </p>
                         </div>
                     </div>
