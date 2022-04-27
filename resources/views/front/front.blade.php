@@ -231,7 +231,6 @@
                 <p class="header-details"><span class="highlight">What </span>We Create</p>
                 <p class="lead">{{ $data->text_9 }}</p>
                 <div class="row">
-                    <div class="col-md-2 col-sm-3"></div>
                     <div class="col-md-4 col-sm-6">
                         <div class="hover-overlay">
                             @if($photos->isNotEmpty())
