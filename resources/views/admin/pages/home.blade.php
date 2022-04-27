@@ -96,6 +96,8 @@
 
                 @include('admin.includes.image', ['image_id' => 7])
 
+                @include('admin.includes.image', ['image_id' => 8])
+
                 <h2>OUR SKILLS</h2>
                 <div class="mb-4">
                     <label class="form-label" for="text_1">Subtitle</label>
